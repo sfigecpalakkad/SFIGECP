@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://sfi-gec.vercel.app/sitemap.xml

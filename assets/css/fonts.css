@@ -1,0 +1,46 @@
+/* Custom Font Registration */
+@font-face {
+  font-family: 'Gimme Danger';
+  src: url('../img/gimme danger.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Gimme Danger font to hero heading only */
+#hero h2 {
+  font-family: 'Gimme Danger', 'Poppins', system-ui, sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Typing animation for typed text */
+.typed {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 3px solid var(--primary-red, #dc2626);
+  padding-bottom: 2px;
+  display: inline;
+}
+
+/* Styled cursor for typed.js */
+.typed-cursor {
+  color: var(--primary-red, #dc2626) !important;
+  opacity: 1;
+  font-weight: bold;
+  margin-left: 2px;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.typed-cursor.typed-cursor--blink {
+  animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "sfi-gec-palakkad",
+  "version": "2.0.0",
+  "description": "SFI GEC Palakkad - Study Companion Portal with Sahayi",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server . --port=3000 --open=./index.html",
+    "dev": "npx live-server . --port=3000",
+    "build": "echo 'Build complete'",
+    "optimize:images": "npx imagemin assets/img --out-dir=assets/img"
+  },
+  "keywords": [
+    "study-notes",
+    "question-papers",
+    "scholarships",
+    "gec-palakkad",
+    "sahayi",
+    "study-companion"
+  ],
+  "author": "SFI GEC Palakkad",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/sfi-gec-palakkad.git"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

@@ -1,0 +1,276 @@
+/* ============================================================
+   SAHAYI - STUDY COMPANION STYLES
+   ============================================================ */
+
+.sahayi-hub {
+  padding: 4rem 0;
+  min-height: 70vh;
+}
+
+.sahayi-hub .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.sahayi-type-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sahayi-type-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.sahayi-type-card i {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sahayi-type-card .card-body {
+  padding: 2rem 1.5rem;
+}
+
+.sahayi-type-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.sahayi-type-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.sahayi-dept-card,
+.sahayi-sem-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sahayi-dept-card:hover,
+.sahayi-sem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(20, 157, 221, 0.2) !important;
+  border-color: var(--accent-color);
+}
+
+.sahayi-dept-card .card-body,
+.sahayi-sem-card .card-body {
+  padding: 2rem 1rem;
+}
+
+.sahayi-dept-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.sahayi-content {
+  min-height: 80vh;
+  padding: 3rem 0;
+}
+
+.sahayi-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.sahayi-content .text-muted {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.scholarship-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.scholarship-card .card-body {
+  padding: 2rem;
+}
+
+.scholarship-card .card-title {
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.scholarship-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--default-color);
+}
+
+.scholarship-card i {
+  font-size: 1.5rem;
+}
+
+/* Department/Semester Navigation */
+.sahayi-sem-card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sahayi-sem-card .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.sahayi-sem-card .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+/* Back Navigation */
+.sahayi-content a.btn-link {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.sahayi-content a.btn-link:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Resource Cards */
+.sahayi-content .card {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.sahayi-content .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-3px);
+}
+
+.sahayi-content .card-body {
+  padding: 1.5rem;
+}
+
+.sahayi-content .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--heading-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sahayi-hub {
+    padding: 3rem 0;
+  }
+
+  .sahayi-content h2 {
+    font-size: 2rem;
+  }
+
+  .sahayi-hub .lead {
+    font-size: 1rem;
+  }
+
+  .sahayi-type-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sahayi-hub {
+    padding: 2rem 0;
+  }
+
+  .sahayi-content {
+    padding: 2rem 0;
+  }
+
+  .sahayi-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .sahayi-hub .lead {
+    font-size: 0.95rem;
+  }
+
+  .sahayi-type-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .sahayi-type-card i {
+    font-size: 2.5rem !important;
+  }
+
+  .scholarship-card .card-body {
+    padding: 1.5rem;
+  }
+
+  .scholarship-card .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sahayi-hub {
+    padding: 1.5rem 0;
+  }
+
+  .sahayi-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .sahayi-type-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .sahayi-dept-card:hover,
+  .sahayi-sem-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .sahayi-type-card .btn-sm {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Accessibility */
+.sahayi-dept-card:focus,
+.sahayi-sem-card:focus,
+.sahayi-type-card:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .sahayi-type-card {
+    background-color: var(--surface-color);
+  }
+
+  .scholarship-card {
+    background-color: var(--surface-color);
+  }
+}

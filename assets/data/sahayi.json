@@ -1,0 +1,154 @@
+{
+  "departments": [
+    { "id": "cse", "name": "Computer Science & Engineering", "icon": "bi-laptop" },
+    { "id": "it", "name": "Information Technology", "icon": "bi-code-slash" },
+    { "id": "ece", "name": "Electronics & Communication Engineering", "icon": "bi-cpu" },
+    { "id": "eee", "name": "Electrical & Electronics Engineering", "icon": "bi-lightning" },
+    { "id": "civil", "name": "Civil Engineering", "icon": "bi-building" },
+    { "id": "mech", "name": "Mechanical Engineering", "icon": "bi-gear" }
+  ],
+  "semesters": ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"],
+  "resources": {
+    "notes": [
+      {
+        "id": "s1-cse-math1",
+        "title": "Mathematics for Information Science-1",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1Gi4qp9hK1SrRBtLxVB-tU3En3CWckfu3"
+      },
+      {
+        "id": "s1-cse-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/15DT5P0vLolf_rpp3VeH5YSuRfjWPsIKE?usp=drive_link"
+      },
+      {
+        "id": "s1-cse-physics",
+        "title": "Physics for Information Science",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1Dbm37gCBKZVn5kDmV3J9padiNqRwUDHf?usp=drive_link"
+      },
+      {
+        "id": "s1-cse-chemistry",
+        "title": "Chemistry for Information Science",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/159CZ1-AJNEVj8P2g4TnOR-HNUPZwOkD8?usp=drive_link"
+      },
+      {
+        "id": "s1-cse-engr-graphics",
+        "title": "Engineering Graphics and Computer Aided Drawing",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/159EIlSaq4S4fNysNOonLGu9LFHS5vw0D?usp=drive_link"
+      },
+      {
+        "id": "s1-cse-electrical",
+        "title": "Introduction to Electrical & Electronics Engineering",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/15BJ8Py7-Cvxwp9FEzy31SOf9M3ZXZ51c?usp=drive_link"
+      },
+      {
+        "id": "s1-cse-life-skills",
+        "title": "Life Skills and Professional Communication",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/15HHHRhpDxG3blNahqcRNHFWOxDolG41X?usp=drive_link"
+      },
+      {
+        "id": "s1-it-math1",
+        "title": "Mathematics for Information Science-1",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1Gi4qp9hK1SrRBtLxVB-tU3En3CWckfu3?usp=drive_link"
+      },
+      {
+        "id": "s1-it-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/15DT5P0vLolf_rpp3VeH5YSuRfjWPsIKE?usp=drive_link"
+      },
+      {
+        "id": "s1-it-physics",
+        "title": "Physics for Information Science",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/113tStRrXMVMgNeD944eJDnZPsIKkYwxs?usp=drive_link"
+      },
+      {
+        "id": "s1-it-chemistry",
+        "title": "Chemistry for Information Science",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1zRCsyMeOx7VBoYRfECY18rSZ40gUZprc?usp=drive_link"
+      },
+      {
+        "id": "s1-it-engr-graphics",
+        "title": "Engineering Graphics and Computer Aided Drawing",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/193JzS01OyDjF5DI7olHi3rjQ3BaBkgO4?usp=drive_link"
+      },
+      {
+        "id": "s1-it-electrical",
+        "title": "Introduction to Electrical & Electronics Engineering",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1t1mDD40mciY0qPYVYcuxBLXPInNCXRy2?usp=drive_link"
+      },
+      {
+        "id": "s1-it-life-skills",
+        "title": "Life Skills and Professional Communication",
+        "semester": "S1",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/10YNphte8BY8PYm4fGO_RyoH04BtFCK1P?usp=drive_link"
+      },
+      {
+        "id": "s1-eee-math1",
+        "title": "Mathematics for Electrical Science-1",
+        "semester": "S1",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1GzcvbPOgzG9j7QqNgjgc58lCvFVYTtKm?usp=drive_link"
+      }
+    ],
+    "qnpapers": [
+      {
+        "id": "s1-cse-qn",
+        "title": "S1 CSE Question Papers",
+        "semester": "S1",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_CSE?usp=drive_link"
+      }
+    ],
+    "scholarships": [
+      {
+        "id": "scholarship-general",
+        "title": "General Scholarship Info",
+        "type": "scholarship",
+        "content": "Various scholarships are available for eligible students.",
+        "link": "https://gecp.ac.in/scholarships"
+      }
+    ]
+  }
+}
