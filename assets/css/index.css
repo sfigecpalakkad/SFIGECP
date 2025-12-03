@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 /* ============================================
    Hero Section
    ============================================ */
@@ -334,10 +338,15 @@
 /* ============================================
    Section Titles
    ============================================ */
+.section-title {
+    text-align: center;
+}
+
 .section-title h2 {
     position: relative;
     padding-bottom: 10px;
     color: #222;
+    display: inline-block;
 }
 
 .section-title h2::after {
@@ -412,8 +421,148 @@ a {
 }
 
 /* ============================================
-   Responsive Design
+   Footer
    ============================================ */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    border-top: 3px solid var(--primary-red);
+    box-sizing: border-box;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-contact-item i {
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-contact-item div {
+    flex: 1;
+}
+
+.footer-contact-item h4 {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.footer-contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid var(--primary-red);
+    border-radius: 50%;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--primary-red);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p a {
+    color: var(--primary-red);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+  main,
+  footer {
+    margin-left: 300px;
+  }
+}
+
 @media (max-width: 1200px) {
     .col-lg-20 {
         flex: 0 0 50%;

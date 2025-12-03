@@ -29,7 +29,7 @@
             "phone": "+911234567890",
             "email": "",
             "whatsapp": "+911234567890",
-            "image": "",
+            "image": "assets/img/travel.jpg",
             "showInContact": true,
             "order": 3
         },
