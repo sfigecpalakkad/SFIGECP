@@ -1,0 +1,110 @@
+/* Unit Committee Card Enhancements - 2 CARDS PER ROW */
+
+/* Force 2 cards per row on desktop */
+.col-lg-20 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+}
+
+/* Large, prominent cards */
+.member-card {
+    text-align: center !important;
+    background: var(--surface-color) !important;
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    transition: all 0.3s ease !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 350px !important;
+    border: 2px solid transparent !important;
+}
+
+.member-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2) !important;
+    border-color: #dc2626 !important;
+}
+
+/* VERY LARGE, clearly visible images */
+.member-image {
+    width: 180px !important;
+    height: 180px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    margin: 0 auto 24px !important;
+    border: 6px solid #dc2626 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3) !important;
+    background: white !important;
+}
+
+.member-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Large, readable text */
+.member-position {
+    font-size: 0.9rem !important;
+    color: #dc2626 !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+.member-name {
+    font-size: 1.4rem !important;
+    color: #991b1b !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+}
+
+/* Tablet: still 2 per row */
+@media (max-width: 992px) {
+    .col-lg-20 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .member-image {
+        width: 160px !important;
+        height: 160px !important;
+    }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+    .col-lg-20 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .member-card {
+        padding: 32px 24px !important;
+        min-height: 320px !important;
+    }
+
+    .member-image {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .member-name {
+        font-size: 1.2rem !important;
+    }
+
+    .member-position {
+        font-size: 0.8rem !important;
+    }
+}

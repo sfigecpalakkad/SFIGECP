@@ -15,7 +15,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +31,9 @@
 
   <!-- Custom Font CSS -->
   <link href="assets/css/fonts.css" rel="stylesheet">
+
+  <!-- Member Cards Enhancement CSS -->
+  <link href="assets/css/member-cards.css" rel="stylesheet">
 
   <style>
     :root {
@@ -94,8 +99,15 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(18px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(18px);
+      }
     }
 
     .hero .container {
@@ -112,14 +124,14 @@
       font-size: 48px;
       font-weight: 800;
       letter-spacing: 0.6px;
-      text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
     }
 
     .typed {
       color: #fff;
       font-size: 20px;
       display: inline-block;
-      border-bottom: 2px solid rgba(255,255,255,0.12);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.12);
       padding-bottom: 6px;
     }
 
@@ -130,7 +142,7 @@
       border: none;
       padding: 12px 22px;
       border-radius: 40px;
-      box-shadow: 0 12px 30px rgba(153,27,27,0.24);
+      box-shadow: 0 12px 30px rgba(153, 27, 27, 0.24);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: inline-block;
       font-weight: 700;
@@ -138,67 +150,212 @@
 
     .hero .btn-cta:hover {
       transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(153,27,27,0.28);
+      box-shadow: 0 18px 40px rgba(153, 27, 27, 0.28);
     }
 
     /* Unit committee + cards: slightly more compact */
-    #unit-committee { padding: 48px 0; }
-
-    .member-card { text-align: center; background: var(--surface-color); border-radius: 10px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
-
-    .member-image { width: 92px; height: 92px; border-radius: 50%; overflow: hidden; margin: 0 auto 10px; border: 3px solid var(--primary-red); }
-
-    .member-name { font-size: 0.98rem; color: var(--primary-dark); margin: 0; font-weight: 700; }
-
-    .member-position { font-size: 0.72rem; color: var(--primary-red); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-
-    /* Sahayi cards */
-    .sahayi-card { border-left: 4px solid var(--primary-red); background: var(--surface-color); border-radius: 10px; }
-
-    .card-icon { font-size: 2.6rem; color: var(--primary-red); }
-
-    .section-title h2 { position: relative; padding-bottom: 10px; color: #222; }
-
-    .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: linear-gradient(90deg, var(--primary-red), var(--primary-dark)); border-radius: 2px; }
-
-    .btn-primary, .btn-danger { background: var(--primary-red); border: none; }
-
-    .btn-primary:hover, .btn-danger:hover { background: var(--primary-dark); transform: translateY(-2px); }
-
-    a { color: var(--primary-red); }
-
-    .section { animation: fadeInUp 0.6s ease-out; }
-
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* Header tweaks for clearer logo/profile */
-    #header { border-bottom: 3px solid var(--primary-red); }
-
-    .profile-img img { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; border: 6px solid rgba(0,0,0,0.06); }
-
-    .logo .sitename { font-size: 18px; font-weight: 800; letter-spacing: 0.6px; color: var(--heading-color); margin: 8px 0; }
-
-    /* Icon and interactive tweaks */
-    .navmenu ul li a:hover { color: var(--primary-red); transform: scale(1.03); }
-
-    .icon-box:hover { box-shadow: 0 10px 26px rgba(153,27,27,0.12); transform: translateY(-6px); }
-
-    .cta-banner { background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%); padding: 30px; border-radius: 10px; box-shadow: 0 12px 30px rgba(153,27,27,0.2); }
-
-    .col-lg-20 { flex: 0 0 20%; max-width: 20%; }
-
-    @media (max-width: 1200px) { .col-lg-20 { flex: 0 0 25%; max-width: 25%; } }
-    @media (max-width: 992px)  { .col-lg-20 { flex: 0 0 33.333%; max-width: 33.333%; } }
-    @media (max-width: 768px)  {
-      .col-lg-20 { flex: 0 0 50%; max-width: 50%; }
-      .member-image { width: 80px; height: 80px; }
-      .member-name { font-size: 0.88rem; }
-      .member-position { font-size: 0.72rem; }
-      #hero::before { width: 250px; height: 250px; }
-      #sahayi::before { right: 20px; font-size: 10px; padding: 4px 12px; }
+    #unit-committee {
+      padding: 48px 0;
     }
 
-    @media (max-width: 576px) { .col-lg-20 { flex: 0 0 100%; max-width: 100%; } .hero h2 { font-size: 28px; } .typed { font-size: 16px; } }
+    .member-card {
+      text-align: center;
+      background: var(--surface-color);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .member-image {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      border: 3px solid var(--primary-red);
+    }
+
+    .member-name {
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .member-position {
+      font-size: 0.72rem;
+      color: var(--primary-red);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    /* Sahayi cards */
+    .sahayi-card {
+      border-left: 4px solid var(--primary-red);
+      background: var(--surface-color);
+      border-radius: 10px;
+    }
+
+    .card-icon {
+      font-size: 2.6rem;
+      color: var(--primary-red);
+    }
+
+    .section-title h2 {
+      position: relative;
+      padding-bottom: 10px;
+      color: #222;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-red), var(--primary-dark));
+      border-radius: 2px;
+    }
+
+    .btn-primary,
+    .btn-danger {
+      background: var(--primary-red);
+      border: none;
+    }
+
+    .btn-primary:hover,
+    .btn-danger:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    a {
+      color: var(--primary-red);
+    }
+
+    .section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Header tweaks for clearer logo/profile */
+    #header {
+      border-bottom: 3px solid var(--primary-red);
+    }
+
+    .profile-img img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .logo .sitename {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      color: var(--heading-color);
+      margin: 8px 0;
+    }
+
+    /* Icon and interactive tweaks */
+    .navmenu ul li a:hover {
+      color: var(--primary-red);
+      transform: scale(1.03);
+    }
+
+    .icon-box:hover {
+      box-shadow: 0 10px 26px rgba(153, 27, 27, 0.12);
+      transform: translateY(-6px);
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(153, 27, 27, 0.2);
+    }
+
+    .col-lg-20 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    @media (max-width: 1200px) {
+      .col-lg-20 {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .col-lg-20 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .col-lg-20 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      .member-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      .member-name {
+        font-size: 0.88rem;
+      }
+
+      .member-position {
+        font-size: 0.72rem;
+      }
+
+      #hero::before {
+        width: 250px;
+        height: 250px;
+      }
+
+      #sahayi::before {
+        right: 20px;
+        font-size: 10px;
+        padding: 4px 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .col-lg-20 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .typed {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -218,7 +375,8 @@
     <div class="social-links text-center">
       <a href="https://www.facebook.com/sfigecpkd" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
       <a href="http://wa.me/+917994134028" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.instagram.com/sfigecp?igsh=eHJob2MwMm16OHdo" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.instagram.com/sfigecp?igsh=eHJob2MwMm16OHdo" class="instagram" target="_blank"><i
+          class="bi bi-instagram"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -257,46 +415,48 @@
         <div class="row gy-4 mb-5">
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
-              The SFI (Students' Federation of India) is a major student political organization in Kerala. 
-              The GEC Palakkad unit operates as the official representative body for students affiliated with the SFI within the college. 
-              We are actively involved in <strong style="color: var(--primary-red);">student welfare</strong>, 
-              <strong style="color: var(--primary-red);">advocacy on student issues</strong>, and 
-              <strong style="color: var(--primary-red);">organizing campus events</strong> that enrich student life and promote academic excellence.
+              The SFI (Students' Federation of India) is a major student political organization in Kerala.
+              The GEC Palakkad unit operates as the official representative body for students affiliated with the SFI
+              within the college.
+              We are actively involved in <strong style="color: var(--primary-red);">student welfare</strong>,
+              <strong style="color: var(--primary-red);">advocacy on student issues</strong>, and
+              <strong style="color: var(--primary-red);">organizing campus events</strong> that enrich student life and
+              promote academic excellence.
             </p>
           </div>
         </div>
 
- 
-    <!-- Unit Committee Section -->
-    <section id="unit-committee" class="unit-committee section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Unit Committee</h2>
-          <p>Meet the dedicated leaders driving student welfare and activism</p>
-        </div>
 
-        <div class="row g-4">
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-u" data-aos-delay="100">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets\img\president.jpg" alt="President">
-              </div>
-              <p class="member-position">President</p>
-              <h3 class="member-name">COM. BHARATH SANKAR</h3>
+        <!-- Unit Committee Section -->
+        <section id="unit-committee" class="unit-committee section">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Unit Committee</h2>
+              <p>Meet the dedicated leaders driving student welfare and activism</p>
             </div>
-          </div>
 
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="150">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets\img\secretary.jpg" alt="Secretary">
+            <div class="row g-4">
+              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-u" data-aos-delay="100">
+                <div class="member-card">
+                  <div class="member-image">
+                    <img src="assets\img\secretary.jpg" alt="Secretary">
+                  </div>
+                  <p class="member-position">Secretary</p>
+                  <h3 class="member-name">COM. AJMAL V B</h3>
+                </div>
               </div>
-              <p class="member-position">Secretary</p>
-              <h3 class="member-name">COM. AJMAL V B</h3>
-            </div>
-          </div>
 
-          <!-- <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="150">
+                <div class="member-card">
+                  <div class="member-image">
+                    <img src="assets\img\president.jpg" alt="President">
+                  </div>
+                  <p class="member-position">President</p>
+                  <h3 class="member-name">COM. BHARATH SANKAR</h3>
+                </div>
+              </div>
+
+              <!-- <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
             <div class="member-card">
               <div class="member-image">
                 <img src="assets/img/IMG-20250202-WA0031.jpg" alt="Member">
@@ -379,97 +539,97 @@
       </div>
     </section> -->
 
-    <!-- Sahayi Section -->
-    <section id="sahayi" class="sahayi section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Sahayi - Your Study Partner</h2>
-          <p>Everything you need for your academic journey organized by department and semester</p>
-        </div>
+              <!-- Sahayi Section -->
+              <section id="sahayi" class="sahayi section">
+                <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                    <h2>Sahayi - Your Study Partner</h2>
+                    <p>Everything you need for your academic journey organized by department and semester</p>
+                  </div>
 
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="./sahayi/notes.html" class="portfolio-item sahayi-card text-decoration-none">
-              <div class="text-center p-4">
-                <i class="bi bi-file-text card-icon"></i>
-                <h3 class="mt-3 mb-2" style="color: #222;">Study Notes</h3>
-                <p class="text-muted">Comprehensive study notes organized by semester and subject</p>
-                <span class="text-danger fw-bold">Explore →</span>
-              </div>
-            </a>
-          </div>
+                  <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <a href="./sahayi/notes.html" class="portfolio-item sahayi-card text-decoration-none">
+                        <div class="text-center p-4">
+                          <i class="bi bi-file-text card-icon"></i>
+                          <h3 class="mt-3 mb-2" style="color: #222;">Study Notes</h3>
+                          <p class="text-muted">Comprehensive study notes organized by semester and subject</p>
+                          <span class="text-danger fw-bold">Explore →</span>
+                        </div>
+                      </a>
+                    </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-            <a href="./sahayi/qnpapers.html" class="portfolio-item sahayi-card text-decoration-none">
-              <div class="text-center p-4">
-                <i class="bi bi-clipboard-check card-icon"></i>
-                <h3 class="mt-3 mb-2" style="color: #222;">Question Papers</h3>
-                <p class="text-muted">Previous year papers for exam preparation and practice</p>
-                <span class="text-danger fw-bold">Explore →</span>
-              </div>
-            </a>
-          </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                      <a href="./sahayi/qnpapers.html" class="portfolio-item sahayi-card text-decoration-none">
+                        <div class="text-center p-4">
+                          <i class="bi bi-clipboard-check card-icon"></i>
+                          <h3 class="mt-3 mb-2" style="color: #222;">Question Papers</h3>
+                          <p class="text-muted">Previous year papers for exam preparation and practice</p>
+                          <span class="text-danger fw-bold">Explore →</span>
+                        </div>
+                      </a>
+                    </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <a href="./sahayi/scholarship.html" class="portfolio-item sahayi-card text-decoration-none">
-              <div class="text-center p-4">
-                <i class="bi bi-gift card-icon"></i>
-                <h3 class="mt-3 mb-2" style="color: #222;">Scholarships</h3>
-                <p class="text-muted">Financial aid opportunities and scholarship information</p>
-                <span class="text-danger fw-bold">Explore →</span>
-              </div>
-            </a>
-          </div>
-        </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <a href="./sahayi/scholarship.html" class="portfolio-item sahayi-card text-decoration-none">
+                        <div class="text-center p-4">
+                          <i class="bi bi-gift card-icon"></i>
+                          <h3 class="mt-3 mb-2" style="color: #222;">Scholarships</h3>
+                          <p class="text-muted">Financial aid opportunities and scholarship information</p>
+                          <span class="text-danger fw-bold">Explore →</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
 
-        <div class="cta-banner text-white text-center mt-5">
-          <h3>Ready to Excel Academically?</h3>
-          <p class="mb-0 mt-2">Join thousands of students using Sahayi for academic success</p>
-          <a href="./sahayi/index.html" class="btn btn-light mt-3 fw-bold">Explore All Resources →</a>
-        </div>
-      </div>
-    </section>
+                  <div class="cta-banner text-white text-center mt-5">
+                    <h3>Ready to Excel Academically?</h3>
+                    <p class="mb-0 mt-2">Join thousands of students using Sahayi for academic success</p>
+                    <a href="./sahayi/index.html" class="btn btn-light mt-3 fw-bold">Explore All Resources →</a>
+                  </div>
+                </div>
+              </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Get in Touch</h2>
-        </div>
+              <!-- Contact Section -->
+              <section id="contact" class="contact section">
+                <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                    <h2>Get in Touch</h2>
+                  </div>
 
-        <div class="row gy-4">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-item d-flex">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p><a href="mailto:sfigecpalakkad01@gmail.com">sfigecpalakkad01@gmail.com</a></p>
-              </div>
-            </div>
-          </div>
+                  <div class="row gy-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="info-item d-flex">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                          <h3>Email</h3>
+                          <p><a href="mailto:sfigecpalakkad01@gmail.com">sfigecpalakkad01@gmail.com</a></p>
+                        </div>
+                      </div>
+                    </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-item d-flex">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Location</h3>
-                <p>GEC Palakkad, Kerala, India</p>
-              </div>
-            </div>
-          </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="info-item d-flex">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                          <h3>Location</h3>
+                          <p>GEC Palakkad, Kerala, India</p>
+                        </div>
+                      </div>
+                    </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="info-item d-flex">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p><a href="tel:+917994134028">+91 7994 134028</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                      <div class="info-item d-flex">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                          <h3>Call Us</h3>
+                          <p><a href="tel:+917994134028">+91 7994 134028</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
   </main>
 
@@ -508,7 +668,7 @@
   </script>
 
   <script>
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const header = document.getElementById('header');
       if (window.scrollY > 100) {
         header.classList.add('header-scrolled');

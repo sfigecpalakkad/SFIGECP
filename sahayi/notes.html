@@ -26,17 +26,38 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap Icons -->
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    * { font-family: 'Poppins', sans-serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; font-weight: 700; }
-    .gradient-primary { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); }
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+    }
+
+    .gradient-primary {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    }
+
     .dept-card {
       @apply bg-white rounded-xl shadow-lg p-6 cursor-pointer border-l-4 border-primary hover:shadow-2xl hover:scale-105 transform transition duration-300;
+    }
+
+    .dept-card:focus {
+      @apply outline-none ring-2 ring-primary ring-offset-2;
     }
   </style>
 </head>
@@ -46,14 +67,15 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+      <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition" aria-label="Go to homepage">
         <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
           <i class="bi bi-book-fill text-white text-lg"></i>
         </div>
         <h1 class="text-xl font-bold text-gray-900">SFI GECP</h1>
       </a>
 
-      <a href="./index.html" class="text-primary hover:text-primary-dark font-semibold">← Back</a>
+      <a href="./index.html" class="text-primary hover:text-primary-dark font-semibold"
+        aria-label="Back to Sahayi hub">← Back</a>
     </nav>
   </header>
 
@@ -68,7 +90,7 @@
   <!-- Main Content -->
   <section class="py-16 px-4">
     <div class="max-w-6xl mx-auto">
-      
+
       <!-- Department Selection -->
       <div id="deptContainer" class="mb-16">
         <h2 class="text-3xl font-bold text-gray-900 mb-8">Choose Your Department</h2>
@@ -80,12 +102,13 @@
       <!-- Semester Selection (Hidden initially) -->
       <div id="semesterContainer" class="mb-16 hidden">
         <div class="mb-8">
-          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4">
+          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4"
+            aria-label="Change department">
             ← Change Department
           </button>
           <h2 id="semesterTitle" class="text-3xl font-bold text-gray-900">Select Semester</h2>
         </div>
-        
+
         <div id="semesterCards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <!-- Semester cards will be populated by JavaScript -->
         </div>
@@ -94,12 +117,13 @@
       <!-- Resources List (Hidden initially) -->
       <div id="resourcesContainer" class="mb-16 hidden">
         <div class="mb-8">
-          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4">
+          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4"
+            aria-label="Choose another department">
             ← Choose Another Department
           </button>
           <h2 id="resourcesTitle" class="text-3xl font-bold text-gray-900">Available Resources</h2>
         </div>
-        
+
         <div id="resourcesList" class="space-y-4">
           <!-- Resources will be populated by JavaScript -->
         </div>
@@ -115,31 +139,39 @@
     </div>
   </footer>
 
-  <!-- Sahayi Navigator Script -->
+  <!-- Enhanced Sahayi Navigator Script -->
   <script src="../assets/js/sahayi.js"></script>
-  
+
   <script>
     let selectedDept = null;
     let allData = null;
 
     async function initPage() {
-      try {
-        const response = await fetch('../assets/data/sahayi.json');
-        allData = await response.json();
+      // Use the enhanced SahayiNavigator from sahayi.js
+      if (window.sahayiNavigator && window.sahayiNavigator.data) {
+        allData = window.sahayiNavigator.data;
         renderDepartments();
-      } catch (error) {
-        console.error('Error loading data:', error);
-        document.getElementById('departmentCards').innerHTML = '<p class="text-red-500">Error loading departments</p>';
+      } else {
+        // Fallback: wait for navigator to initialize
+        setTimeout(initPage, 100);
       }
     }
 
     function renderDepartments() {
       const container = document.getElementById('departmentCards');
+      if (!allData || !allData.departments) {
+        container.innerHTML = '<p class="text-red-500 col-span-full">Error loading departments. Please refresh the page.</p>';
+        return;
+      }
+
       container.innerHTML = '';
 
       allData.departments.forEach(dept => {
         const card = document.createElement('div');
         card.className = 'dept-card';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `Select ${dept.name} department`);
         card.innerHTML = `
           <div class="flex items-center gap-4">
             <div class="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center">
@@ -151,7 +183,18 @@
             </div>
           </div>
         `;
+
+        // Click handler
         card.onclick = () => selectDepartment(dept.id, dept.name);
+
+        // Keyboard handler
+        card.onkeypress = (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectDepartment(dept.id, dept.name);
+          }
+        };
+
         container.appendChild(card);
       });
     }
@@ -171,22 +214,29 @@
 
       allData.semesters.forEach(semester => {
         const card = document.createElement('button');
-        card.className = 'bg-white rounded-lg shadow-md p-4 hover:shadow-lg hover:bg-primary-light transition text-center font-bold text-primary-dark hover:text-primary';
+        card.className = 'bg-white rounded-lg shadow-md p-4 hover:shadow-lg hover:bg-primary-light transition text-center font-bold text-primary-dark hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2';
         card.textContent = semester;
+        card.setAttribute('aria-label', `View ${semester} resources`);
         card.onclick = () => selectSemester(semester);
+        card.onkeypress = (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectSemester(semester);
+          }
+        };
         container.appendChild(card);
       });
     }
 
     function selectSemester(semester) {
-      const resources = allData.resources.notes.filter(r => 
+      const resources = allData.resources.notes.filter(r =>
         r.department === selectedDept.id && r.semester === semester
       );
 
       document.getElementById('semesterContainer').style.display = 'none';
       document.getElementById('resourcesContainer').style.display = 'block';
       document.getElementById('resourcesTitle').textContent = `${selectedDept.name} - ${semester} Notes`;
-      
+
       renderResources(resources);
       window.scrollTo(0, 0);
     }
@@ -196,7 +246,7 @@
       container.innerHTML = '';
 
       if (resources.length === 0) {
-        container.innerHTML = '<p class="text-gray-600 text-lg">No resources available for this selection.</p>';
+        container.innerHTML = '<p class="text-gray-600 text-lg">No resources available for this selection yet. Please check back later!</p>';
         return;
       }
 
@@ -205,7 +255,8 @@
         item.href = resource.gdrive_url;
         item.target = '_blank';
         item.rel = 'noopener noreferrer';
-        item.className = 'block bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:bg-primary-light transition border-l-4 border-primary';
+        item.className = 'block bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:bg-primary-light transition border-l-4 border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2';
+        item.setAttribute('aria-label', `Open ${resource.title} on Google Drive`);
         item.innerHTML = `
           <div class="flex items-center justify-between">
             <div>
