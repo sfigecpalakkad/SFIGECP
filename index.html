@@ -35,337 +35,19 @@
   <!-- Member Cards Enhancement CSS -->
   <link href="assets/css/member-cards.css" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-red: #dc2626;
-      --primary-dark: #991b1b;
-      --primary-light: #fee2e2;
-    }
+  <!-- Index Page Custom CSS -->
+  <link href="assets/css/index.css" rel="stylesheet">
 
-    * {
-      transition: all 0.25s ease;
-      box-sizing: border-box;
-    }
-
-    /* Hero tweaks: dim background image, center text and add CTA */
-    #hero {
-      position: relative;
-      overflow: hidden;
-      min-height: 72vh;
-      display: flex;
-      align-items: center;
-    }
-
-    #hero img {
-      position: absolute;
-      inset: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      z-index: 1;
-      filter: brightness(0.45) saturate(0.95);
-      transform-origin: center;
-    }
-
-    /* Decorative soft shapes */
-    #hero::before,
-    #hero::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.08;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    #hero::before {
-      top: -40px;
-      right: -120px;
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle at 30% 30%, rgba(220, 38, 38, 0.12), rgba(153, 27, 27, 0.02));
-      animation: float 8s ease-in-out infinite;
-    }
-
-    #hero::after {
-      bottom: -80px;
-      left: -120px;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at 70% 70%, rgba(153, 27, 27, 0.12), rgba(220, 38, 38, 0.02));
-      animation: float 10s ease-in-out infinite reverse;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(18px);
-      }
-    }
-
-    .hero .container {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-      color: #fff;
-      padding: 40px 20px;
-      max-width: 900px;
-    }
-
-    .hero h2 {
-      margin: 0 0 8px 0;
-      font-size: 48px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-    }
-
-    .typed {
-      color: #fff;
-      font-size: 20px;
-      display: inline-block;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.12);
-      padding-bottom: 6px;
-    }
-
-    .hero .btn-cta {
-      margin-top: 18px;
-      background: linear-gradient(90deg, var(--primary-red), var(--primary-dark));
-      color: #fff;
-      border: none;
-      padding: 12px 22px;
-      border-radius: 40px;
-      box-shadow: 0 12px 30px rgba(153, 27, 27, 0.24);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      display: inline-block;
-      font-weight: 700;
-    }
-
-    .hero .btn-cta:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(153, 27, 27, 0.28);
-    }
-
-    /* Unit committee + cards: slightly more compact */
-    #unit-committee {
-      padding: 48px 0;
-    }
-
-    .member-card {
-      text-align: center;
-      background: var(--surface-color);
-      border-radius: 10px;
-      padding: 18px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    }
-
-    .member-image {
-      width: 92px;
-      height: 92px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 10px;
-      border: 3px solid var(--primary-red);
-    }
-
-    .member-name {
-      font-size: 0.98rem;
-      color: var(--primary-dark);
-      margin: 0;
-      font-weight: 700;
-    }
-
-    .member-position {
-      font-size: 0.72rem;
-      color: var(--primary-red);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-
-    /* Sahayi cards */
-    .sahayi-card {
-      border-left: 4px solid var(--primary-red);
-      background: var(--surface-color);
-      border-radius: 10px;
-    }
-
-    .card-icon {
-      font-size: 2.6rem;
-      color: var(--primary-red);
-    }
-
-    .section-title h2 {
-      position: relative;
-      padding-bottom: 10px;
-      color: #222;
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary-red), var(--primary-dark));
-      border-radius: 2px;
-    }
-
-    .btn-primary,
-    .btn-danger {
-      background: var(--primary-red);
-      border: none;
-    }
-
-    .btn-primary:hover,
-    .btn-danger:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    a {
-      color: var(--primary-red);
-    }
-
-    .section {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Header tweaks for clearer logo/profile */
-    #header {
-      border-bottom: 3px solid var(--primary-red);
-    }
-
-    .profile-img img {
-      width: 110px;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 6px solid rgba(0, 0, 0, 0.06);
-    }
-
-    .logo .sitename {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      color: var(--heading-color);
-      margin: 8px 0;
-    }
-
-    /* Icon and interactive tweaks */
-    .navmenu ul li a:hover {
-      color: var(--primary-red);
-      transform: scale(1.03);
-    }
-
-    .icon-box:hover {
-      box-shadow: 0 10px 26px rgba(153, 27, 27, 0.12);
-      transform: translateY(-6px);
-    }
-
-    .cta-banner {
-      background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 12px 30px rgba(153, 27, 27, 0.2);
-    }
-
-    .col-lg-20 {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
-
-    @media (max-width: 1200px) {
-      .col-lg-20 {
-        flex: 0 0 25%;
-        max-width: 25%;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .col-lg-20 {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .col-lg-20 {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
-
-      .member-image {
-        width: 80px;
-        height: 80px;
-      }
-
-      .member-name {
-        font-size: 0.88rem;
-      }
-
-      .member-position {
-        font-size: 0.72rem;
-      }
-
-      #hero::before {
-        width: 250px;
-        height: 250px;
-      }
-
-      #sahayi::before {
-        right: 20px;
-        font-size: 10px;
-        padding: 4px 12px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .col-lg-20 {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-
-      .hero h2 {
-        font-size: 28px;
-      }
-
-      .typed {
-        font-size: 16px;
-      }
-    }
-  </style>
 </head>
 
 <body class="index-page">
 
+  <i class="header-toggle d-xl-none bi bi-list"></i>
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+
 
     <div class="profile-img">
-      <img src="assets\img\logo.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -399,7 +81,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-white">SFI GECP</h2>
-        <p><span class="typed" data-typed-items="independence, socialism">independence</span></p>
+        <p><span class="typed" data-typed-items="independence, democracy, socialism">independence</span></p>
         <a href="./sahayi/index.html" class="btn btn-cta" aria-label="Explore Sahayi resources">Explore Sahayi →</a>
       </div>
 
@@ -436,10 +118,10 @@
             </div>
 
             <div class="row g-4">
-              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-u" data-aos-delay="100">
+              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-card">
                   <div class="member-image">
-                    <img src="assets\img\secretary.jpg" alt="Secretary">
+                    <img src="assets/img/secretary.jpg" alt="Secretary">
                   </div>
                   <p class="member-position">Secretary</p>
                   <h3 class="member-name">COM. AJMAL V B</h3>
@@ -449,95 +131,14 @@
               <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="150">
                 <div class="member-card">
                   <div class="member-image">
-                    <img src="assets\img\president.jpg" alt="President">
+                    <img src="assets/img/president.jpg" alt="President">
                   </div>
                   <p class="member-position">President</p>
                   <h3 class="member-name">COM. BHARATH SANKAR</h3>
                 </div>
               </div>
 
-              <!-- <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG-20250202-WA0031.jpg" alt="Member">
-              </div>
-              <p class="member-position">Treasurer</p>
-              <h3 class="member-name">COM. MEMBER 3</h3>
-            </div>
-          </div>
 
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="250">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG_6828 (1).jpg" alt="Member">
-              </div>
-              <p class="member-position">Co-Secretary</p>
-              <h3 class="member-name">COM. MEMBER 4</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG-20250202-WA0031.jpg" alt="Member">
-              </div>
-              <p class="member-position">Joint Secretary</p>
-              <h3 class="member-name">COM. MEMBER 5</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="350">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG_6828 (1).jpg" alt="Member">
-              </div>
-              <p class="member-position">Sports Convener</p>
-              <h3 class="member-name">COM. MEMBER 6</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG-20250202-WA0031.jpg" alt="Member">
-              </div>
-              <p class="member-position">Cultural Head</p>
-              <h3 class="member-name">COM. MEMBER 7</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="450">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG_6828 (1).jpg" alt="Member">
-              </div>
-              <p class="member-position">Academic Wing</p>
-              <h3 class="member-name">COM. MEMBER 8</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG-20250202-WA0031.jpg" alt="Member">
-              </div>
-              <p class="member-position">Welfare Officer</p>
-              <h3 class="member-name">COM. MEMBER 9</h3>
-            </div>
-          </div>
-
-          <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="550">
-            <div class="member-card">
-              <div class="member-image">
-                <img src="assets/img/IMG_6828 (1).jpg" alt="Member">
-              </div>
-              <p class="member-position">Communications</p>
-              <h3 class="member-name">COM. MEMBER 10</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
               <!-- Sahayi Section -->
               <section id="sahayi" class="sahayi section">
@@ -629,6 +230,14 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Contact Team Cards -->
+                <div class="contact-team">
+                  <h3>Contact Our Team</h3>
+                  <div class="row g-4" id="contact-cards-container">
+                    <!-- Cards will be loaded here via JavaScript -->
+                  </div>
+                </div>
               </section>
 
   </main>
@@ -683,6 +292,90 @@
       once: true,
       mirror: false
     });
+  </script>
+
+  <script>
+    // Custom Scrollspy for navigation
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
+
+    function updateActiveNav() {
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 200;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.navmenu a[href="#${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          if (navLink) {
+            navLink.classList.add('active');
+          }
+        }
+      });
+    }
+
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveNav);
+
+    // Update on load
+    window.addEventListener('load', updateActiveNav);
+
+    // Update on click
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+    // Load and display contact cards from JSON
+    async function loadContactCards() {
+      try {
+        const response = await fetch('assets/data/members.json');
+        const data = await response.json();
+
+        const container = document.getElementById('contact-cards-container');
+        const contactMembers = data.committee
+          .filter(member => member.showInContact)
+          .sort((a, b) => a.order - b.order);
+
+        contactMembers.forEach((member, index) => {
+          const card = `
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (index * 100)}">
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h4>${member.name}</h4>
+                <p class="position">${member.position}</p>
+                ${member.phone ? `
+                  <a href="tel:${member.phone}" class="contact-phone">
+                    <i class="bi bi-telephone"></i> ${member.phone}
+                  </a>
+                ` : ''}
+                ${member.whatsapp ? `
+                  <a href="https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '')}" 
+                     class="contact-whatsapp" target="_blank">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          `;
+          container.innerHTML += card;
+        });
+      } catch (error) {
+        console.error('Error loading contact cards:', error);
+      }
+    }
+
+    // Load cards when page loads
+    window.addEventListener('load', loadContactCards);
   </script>
 
 </body>

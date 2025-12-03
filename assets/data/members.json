@@ -1,0 +1,48 @@
+{
+    "committee": [
+        {
+            "id": 1,
+            "name": "COM. AJMAL V B",
+            "position": "Secretary",
+            "phone": "+917994134028",
+            "email": "sfigecpalakkad01@gmail.com",
+            "whatsapp": "+917994134028",
+            "image": "assets/img/secretary.jpg",
+            "showInContact": true,
+            "order": 1
+        },
+        {
+            "id": 2,
+            "name": "COM. BHARATH SANKAR",
+            "position": "President",
+            "phone": "+911234567890",
+            "email": "",
+            "whatsapp": "+911234567890",
+            "image": "assets/img/president.jpg",
+            "showInContact": true,
+            "order": 2
+        },
+        {
+            "id": 3,
+            "name": "COM. MEMBER NAME",
+            "position": "Joint Secretary",
+            "phone": "+911234567890",
+            "email": "",
+            "whatsapp": "+911234567890",
+            "image": "",
+            "showInContact": true,
+            "order": 3
+        },
+        {
+            "id": 4,
+            "name": "COM. MEMBER NAME",
+            "position": "Treasurer",
+            "phone": "+911234567890",
+            "email": "",
+            "whatsapp": "",
+            "image": "",
+            "showInContact": true,
+            "order": 4
+        }
+    ]
+}

@@ -46,3 +46,7 @@ coverage/
 temp/
 tmp/
 *.bak
+
+
+index.html.bootstrap.backup
+index.html.tmp

@@ -488,3 +488,122 @@ a {
     }
 }
 
+
+/* ============================================
+   Contact Section
+   ============================================ */
+.contact-team {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact-team h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background: var(--surface-color);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
+    border-color: var(--primary-red);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon i {
+    font-size: 40px;
+    color: white;
+}
+
+.contact-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 8px;
+}
+
+.contact-card .position {
+    font-size: 14px;
+    color: var(--primary-red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.contact-phone,
+.contact-whatsapp {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-red);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.contact-phone:hover,
+.contact-whatsapp:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+    color: white;
+}
+
+.contact-whatsapp {
+    background: #25D366;
+}
+
+.contact-whatsapp:hover {
+    background: #1da851;
+}
+
+.contact-phone i,
+.contact-whatsapp i {
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-team h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .contact-card {
+        padding: 25px 15px;
+    }
+
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-icon i {
+        font-size: 35px;
+    }
+}
