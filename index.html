@@ -117,26 +117,9 @@
               <p>Meet the dedicated leaders driving student welfare and activism</p>
             </div>
 
-            <div class="row g-4">
-              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-card">
-                  <div class="member-image">
-                    <img src="assets/img/secretary.jpg" alt="Secretary">
-                  </div>
-                  <p class="member-position">Secretary</p>
-                  <h3 class="member-name">COM. AJMAL V B</h3>
-                </div>
-              </div>
-
-              <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="150">
-                <div class="member-card">
-                  <div class="member-image">
-                    <img src="assets/img/president.jpg" alt="President">
-                  </div>
-                  <p class="member-position">President</p>
-                  <h3 class="member-name">COM. BHARATH SANKAR</h3>
-                </div>
-              </div>
+            <div class="row g-4" id="unit-committee-cards">
+              <!-- Cards will be loaded here via JavaScript -->
+            </div>
 
 
 
@@ -361,6 +344,53 @@
   </script>
 
   <script>
+    // Load and display unit committee cards from JSON
+    async function loadUnitCommitteeCards() {
+      try {
+        const response = await fetch('assets/data/members.json');
+        const data = await response.json();
+
+        const container = document.getElementById('unit-committee-cards');
+        const committeeMembers = data.committee
+          .filter(member => (member.position === 'Secretary' || member.position === 'President'))
+          .sort((a, b) => a.order - b.order);
+
+        committeeMembers.forEach((member, index) => {
+          const card = `
+            <div class="col-lg-20 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="${100 + (index * 50)}">
+              <div class="member-card">
+                <div class="member-image">
+                  ${member.image ? `<img src="${member.image}" alt="${member.name}">` : `<i class="bi bi-person-circle"></i>`}
+                </div>
+                <p class="member-position">${member.position}</p>
+                <h3 class="member-name">${member.name}</h3>
+                <div class="member-contact-links">
+                  ${member.phone ? `
+                    <a href="tel:${member.phone}" class="contact-link" title="Call">
+                      <i class="bi bi-telephone"></i>
+                    </a>
+                  ` : ''}
+                  ${member.whatsapp ? `
+                    <a href="https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '')}" class="contact-link" title="WhatsApp" target="_blank">
+                      <i class="bi bi-whatsapp"></i>
+                    </a>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+          container.innerHTML += card;
+        });
+      } catch (error) {
+        console.error('Error loading unit committee cards:', error);
+      }
+    }
+
+    // Load cards when page loads
+    window.addEventListener('load', loadUnitCommitteeCards);
+  </script>
+
+  <script>
     // Load and display contact cards from JSON
     async function loadContactCards() {
       try {
@@ -369,7 +399,7 @@
 
         const container = document.getElementById('contact-cards-container');
         const contactMembers = data.committee
-          .filter(member => member.showInContact)
+          .filter(member => member.showInContact && member.position !== 'Secretary' && member.position !== 'President')
           .sort((a, b) => a.order - b.order);
 
         contactMembers.forEach((member, index) => {
@@ -377,7 +407,7 @@
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (index * 100)}">
               <div class="contact-card">
                 <div class="contact-icon">
-                  <i class="bi bi-person-circle"></i>
+                  ${member.image ? `<img src="${member.image}" alt="${member.name}" class="contact-image">` : `<i class="bi bi-person-circle"></i>`}
                 </div>
                 <h4>${member.name}</h4>
                 <p class="position">${member.position}</p>

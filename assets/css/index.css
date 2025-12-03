@@ -319,6 +319,53 @@ html, body {
     margin: 0;
     font-weight: 700;
     line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.member-contact-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 2px solid;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-link[href^="tel"] {
+    color: #0073e6;
+    border-color: #0073e6;
+}
+
+.contact-link[href^="tel"]:hover {
+    background: #0073e6;
+    color: white;
+}
+
+.contact-link[href*="wa.me"] {
+    color: #25d366;
+    border-color: #25d366;
+}
+
+.contact-link[href*="wa.me"]:hover {
+    background: #25d366;
+    color: white;
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================
@@ -512,17 +559,46 @@ footer .container {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(220, 38, 38, 0.1);
-    border: 2px solid var(--primary-red);
+    background: transparent;
+    border: 2px solid;
     border-radius: 50%;
-    color: var(--primary-red);
     transition: all 0.3s ease;
 }
 
-.footer-social a:hover {
-    background: var(--primary-red);
+.footer-social a.facebook {
+    color: #1877f2;
+    border-color: #1877f2;
+}
+
+.footer-social a.facebook:hover {
+    background: #1877f2;
     color: #fff;
+}
+
+.footer-social a.whatsapp {
+    color: #25d366;
+    border-color: #25d366;
+}
+
+.footer-social a.whatsapp:hover {
+    background: #25d366;
+    color: #fff;
+}
+
+.footer-social a.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+    color: #fff;
+}
+
+.footer-social a.instagram:hover {
     transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .footer-bottom {
@@ -679,11 +755,19 @@ footer .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .contact-icon i {
     font-size: 40px;
     color: white;
+}
+
+.contact-icon .contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .contact-card h4 {
