@@ -19,20 +19,20 @@ class SahayiNavigator {
   async init() {
     try {
       this.showLoading('Loading study resources...');
-      
+
       // Check network connectivity
       if (!navigator.onLine) {
         throw new Error('No internet connection. Please check your network and try again.');
       }
 
       const response = await fetch(this.dataUrl);
-      
+
       if (!response.ok) {
         throw new Error(`Failed to load resources (HTTP ${response.status}). Please try again later.`);
       }
 
       this.data = await response.json();
-      
+
       // Validate data structure
       if (!this.data || !this.data.departments || !this.data.semesters) {
         throw new Error('Invalid data format. Please contact support.');
@@ -43,7 +43,7 @@ class SahayiNavigator {
 
     } catch (error) {
       this.hideLoading();
-      
+
       // Retry logic for network errors
       if (this.retryCount < this.maxRetries && error.message.includes('fetch')) {
         this.retryCount++;
@@ -53,15 +53,14 @@ class SahayiNavigator {
       }
 
       this.showError(error.message);
-      console.error('Sahayi init error:', error);
-      
+
       // Fallback empty data
-      this.data = { 
-        departments: [], 
-        semesters: [], 
-        resources: { notes: [], qnpapers: [], scholarships: [] } 
+      this.data = {
+        departments: [],
+        semesters: [],
+        resources: { notes: [], qnpapers: [], scholarships: [] }
       };
-      
+
       return false;
     }
   }
@@ -131,7 +130,7 @@ class SahayiNavigator {
       </div>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
-    
+
     const container = document.querySelector('.container') || document.body;
     container.insertBefore(errorDiv, container.firstChild);
   }
@@ -185,7 +184,7 @@ class SahayiNavigator {
       // Add click and keyboard handlers
       const cardEl = card.querySelector('.card');
       const btnEl = card.querySelector('button');
-      
+
       cardEl.addEventListener('click', () => this.selectDepartment(dept.id, resourceType));
       cardEl.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -193,7 +192,7 @@ class SahayiNavigator {
           this.selectDepartment(dept.id, resourceType);
         }
       });
-      
+
       btnEl.addEventListener('click', (e) => {
         e.stopPropagation();
         this.selectDepartment(dept.id, resourceType);
@@ -215,14 +214,14 @@ class SahayiNavigator {
 
     this.currentDept = deptId;
     const deptName = dept.name;
-    
+
     sessionStorage.setItem('sahayiDept', deptId);
     sessionStorage.setItem('sahayiDeptName', deptName);
     sessionStorage.setItem('sahayiResourceType', resourceType);
 
     const typeMap = { 'notes': 'notes', 'qnpapers': 'qnpapers', 'scholarships': 'scholarship' };
     const page = typeMap[resourceType] || 'notes';
-    
+
     // Use relative path to avoid subdirectory issues
     window.location.href = `${page}.html?dept=${encodeURIComponent(deptId)}`;
   }
@@ -235,7 +234,7 @@ class SahayiNavigator {
 
     const urlParams = new URLSearchParams(window.location.search);
     const deptId = urlParams.get('dept') || sessionStorage.getItem('sahayiDept');
-    
+
     if (!deptId) {
       this.showError('No department selected. Please go back and select a department.');
       return;
@@ -278,7 +277,7 @@ class SahayiNavigator {
 
       const cardEl = card.querySelector('.card');
       const btn = card.querySelector('button');
-      
+
       cardEl.addEventListener('click', () => this.selectSemester(sem, deptId, resourceType));
       cardEl.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -286,7 +285,7 @@ class SahayiNavigator {
           this.selectSemester(sem, deptId, resourceType);
         }
       });
-      
+
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         this.selectSemester(sem, deptId, resourceType);
@@ -306,7 +305,7 @@ class SahayiNavigator {
     if (filtered.length === 0) {
       const dept = this.data.departments.find(d => d.id === deptId);
       const deptName = dept ? dept.name : deptId.toUpperCase();
-      
+
       this.showError(`No ${resourceType} available for ${deptName} ${semester} yet. Please check back later or contact us if you have materials to share.`);
       return;
     }
@@ -326,7 +325,7 @@ class SahayiNavigator {
     if (!this.data || !container) return;
 
     const resourcesOfType = this.data.resources[resourceType] || [];
-    const filtered = resourcesOfType.filter(r => 
+    const filtered = resourcesOfType.filter(r =>
       r.semester === semester && r.department === deptId
     );
 
@@ -384,8 +383,14 @@ window.addEventListener('offline', () => {
   }
 });
 
-// Initialize on DOM load
+// Initialize on DOM load - only on Sahayi pages
 document.addEventListener('DOMContentLoaded', async () => {
+  // Check if we're on a Sahayi page by looking for specific elements
+  const sahayiContainer = document.getElementById('deptContainer') ||
+    document.querySelector('.hero-sahayi');
+
+  if (!sahayiContainer) return; // Exit if not on a Sahayi page
+
   const navigator = new SahayiNavigator('../assets/data/sahayi.json');
   await navigator.init();
   window.sahayiNavigator = navigator;

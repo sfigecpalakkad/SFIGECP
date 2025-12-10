@@ -129,6 +129,574 @@
         "department": "eee",
         "type": "note",
         "gdrive_url": "https://drive.google.com/drive/folders/1GzcvbPOgzG9j7QqNgjgc58lCvFVYTtKm?usp=drive_link"
+      },
+      {
+        "id": "s1-mech-mechanics",
+        "title": "Engineering Mechanics",
+        "semester": "S1",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/17JrUtDsKO0KPfYneYj6B7z-PHrbeTuwM"
+      },
+      {
+        "id": "s1-mech-chemistry",
+        "title": "Chemistry",
+        "semester": "S1",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1MaHuLtWLVVx8iYbacBMn4nGryOyHtx2p"
+      },
+      {
+        "id": "s1-mech-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1bCh4MGYcHQVEvcvBBgFX3i5xiXAVn9VP"
+      },
+      {
+        "id": "s1-mech-intro",
+        "title": "Introduction to Mechanical and Civil",
+        "semester": "S1",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1MgHJvNKbDsqYvi_1svxcO34GKSzmUE9r"
+      },
+      {
+        "id": "s1-mech-math",
+        "title": "Mathematics",
+        "semester": "S1",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1uB-1cYOrRWaVSfpT6fd8O2_XNMlwZYRW"
+      },
+      {
+        "id": "s1-ece-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/18KgD2EpehV583Nl01MMblseu1NNByZVy"
+      },
+      {
+        "id": "s1-ece-chemistry",
+        "title": "Chemistry",
+        "semester": "S1",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1jZ_3g5LmIAsZ9wly6Tgs8LVW0StvQsyc"
+      },
+      {
+        "id": "s1-ece-graphics",
+        "title": "Engineering Graphics",
+        "semester": "S1",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1GNJ-f3jQqRoWJGRUybakjb0NLOvES28l"
+      },
+      {
+        "id": "s1-ece-electrical",
+        "title": "Introduction to Electrical Engineering",
+        "semester": "S1",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1ZOR0py0yXilITonn1lOCLw3WL9I3eCSp"
+      },
+      {
+        "id": "s1-ece-math",
+        "title": "Mathematics for Electrical Science",
+        "semester": "S1",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1nSiiNyHub0HZufySVI40pcAH7nmtQokg"
+      },
+      {
+        "id": "s1-cse-a-graphics",
+        "title": "Engineering Graphics",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1TBT0suA-AeTbw-ulMB2Bm8t2rwOeu6MY"
+      },
+      {
+        "id": "s1-cse-a-physics",
+        "title": "Physics",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1Zm81rQryKiAQLCrQe9wHEURHnsTBLt2u"
+      },
+      {
+        "id": "s1-cse-a-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1R_BKhwm6pUVOsG3Ww4n_0f-yfWHMWG9Y"
+      },
+      {
+        "id": "s1-cse-a-electrical",
+        "title": "Introduction to Electrical and Electronics Engineering",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1pfj4wczxe52d9PIMP_tKZQW5Wg59cimz"
+      },
+      {
+        "id": "s1-cse-a-math",
+        "title": "Mathematics",
+        "semester": "S1",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_kCu1C5DZ2NvfjUGV2Ml-_d-uWz5u46d"
+      },
+      {
+        "id": "s1-civil-chemistry",
+        "title": "Chemistry",
+        "semester": "S1",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1JZPoU1AM9n34CTg-jS3i3m792BDAtev1"
+      },
+      {
+        "id": "s1-civil-intro",
+        "title": "Introduction to Civil Engineering and Mechanical Engineering",
+        "semester": "S1",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1K-uOyPKbaPn0Jcp1Z4z9zgvYSq4KZz_n"
+      },
+      {
+        "id": "s1-civil-mechanics",
+        "title": "Engineering Mechanics",
+        "semester": "S1",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1N3YvUH0pZFBJjoyQblZ5sOYyZu005-7d"
+      },
+      {
+        "id": "s1-civil-algo",
+        "title": "Algorithmic Thinking with Python",
+        "semester": "S1",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1NOChMPbcVXYVSrrmgqt4i5xBvi9p7Fyt"
+      },
+      {
+        "id": "s2-cse-math2",
+        "title": "Mathematics for Information Science-2",
+        "semester": "S2",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_cse_math"
+      },
+      {
+        "id": "s2-cse-ds",
+        "title": "Data Structures",
+        "semester": "S2",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_cse_ds"
+      },
+      {
+        "id": "s2-cse-oop",
+        "title": "Object Oriented Programming",
+        "semester": "S2",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_cse_oop"
+      },
+      {
+        "id": "s2-it-math2",
+        "title": "Mathematics for Information Science-2",
+        "semester": "S2",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_it_math"
+      },
+      {
+        "id": "s2-it-ds",
+        "title": "Data Structures",
+        "semester": "S2",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_it_ds"
+      },
+      {
+        "id": "s2-it-web",
+        "title": "Web Technologies",
+        "semester": "S2",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_it_web"
+      },
+      {
+        "id": "s2-ece-circuits",
+        "title": "Analog Circuits",
+        "semester": "S2",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_ece_circuits"
+      },
+      {
+        "id": "s2-ece-signals",
+        "title": "Signals and Systems",
+        "semester": "S2",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_ece_signals"
+      },
+      {
+        "id": "s2-eee-circuits",
+        "title": "Basic Electrical Circuits",
+        "semester": "S2",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_eee_circuits"
+      },
+      {
+        "id": "s2-mech-thermo",
+        "title": "Thermodynamics",
+        "semester": "S2",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_mech_thermo"
+      },
+      {
+        "id": "s2-mech-graphics",
+        "title": "Engineering Graphics",
+        "semester": "S2",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_mech_graphics"
+      },
+      {
+        "id": "s2-civil-structures",
+        "title": "Structural Analysis",
+        "semester": "S2",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s2_civil_structures"
+      },
+      {
+        "id": "s3-cse-dbms",
+        "title": "Database Management Systems",
+        "semester": "S3",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_cse_dbms"
+      },
+      {
+        "id": "s3-cse-os",
+        "title": "Operating Systems",
+        "semester": "S3",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_cse_os"
+      },
+      {
+        "id": "s3-cse-compiler",
+        "title": "Compiler Design",
+        "semester": "S3",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_cse_compiler"
+      },
+      {
+        "id": "s3-it-dbms",
+        "title": "Database Management Systems",
+        "semester": "S3",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_it_dbms"
+      },
+      {
+        "id": "s3-it-networks",
+        "title": "Computer Networks",
+        "semester": "S3",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_it_networks"
+      },
+      {
+        "id": "s3-ece-digital",
+        "title": "Digital Systems",
+        "semester": "S3",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_ece_digital"
+      },
+      {
+        "id": "s3-eee-machines",
+        "title": "Electrical Machines",
+        "semester": "S3",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_eee_machines"
+      },
+      {
+        "id": "s3-mech-fluids",
+        "title": "Fluid Mechanics",
+        "semester": "S3",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_mech_fluids"
+      },
+      {
+        "id": "s3-civil-soil",
+        "title": "Soil Mechanics",
+        "semester": "S3",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s3_civil_soil"
+      },
+      {
+        "id": "s4-cse-ai",
+        "title": "Artificial Intelligence",
+        "semester": "S4",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_cse_ai"
+      },
+      {
+        "id": "s4-cse-graphics",
+        "title": "Computer Graphics",
+        "semester": "S4",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_cse_graphics"
+      },
+      {
+        "id": "s4-it-security",
+        "title": "Network Security",
+        "semester": "S4",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_it_security"
+      },
+      {
+        "id": "s4-ece-communication",
+        "title": "Digital Communication",
+        "semester": "S4",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_ece_communication"
+      },
+      {
+        "id": "s4-eee-power",
+        "title": "Power Systems",
+        "semester": "S4",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_eee_power"
+      },
+      {
+        "id": "s4-mech-heat",
+        "title": "Heat Transfer",
+        "semester": "S4",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_mech_heat"
+      },
+      {
+        "id": "s4-civil-hydraulics",
+        "title": "Hydraulics and Hydrology",
+        "semester": "S4",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s4_civil_hydraulics"
+      },
+      {
+        "id": "s5-cse-ml",
+        "title": "Machine Learning",
+        "semester": "S5",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_cse_ml"
+      },
+      {
+        "id": "s5-it-cloud",
+        "title": "Cloud Computing",
+        "semester": "S5",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_it_cloud"
+      },
+      {
+        "id": "s5-ece-wireless",
+        "title": "Wireless Communication",
+        "semester": "S5",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_ece_wireless"
+      },
+      {
+        "id": "s5-eee-control",
+        "title": "Control Systems",
+        "semester": "S5",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_eee_control"
+      },
+      {
+        "id": "s5-mech-design",
+        "title": "Machine Design",
+        "semester": "S5",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_mech_design"
+      },
+      {
+        "id": "s5-civil-design",
+        "title": "Design of Concrete Structures",
+        "semester": "S5",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s5_civil_design"
+      },
+      {
+        "id": "s6-cse-cloud",
+        "title": "Cloud Computing",
+        "semester": "S6",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_cse_cloud"
+      },
+      {
+        "id": "s6-it-devops",
+        "title": "DevOps and Continuous Integration",
+        "semester": "S6",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_it_devops"
+      },
+      {
+        "id": "s6-ece-vlsi",
+        "title": "VLSI Design",
+        "semester": "S6",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_ece_vlsi"
+      },
+      {
+        "id": "s6-eee-drives",
+        "title": "Electrical Drives and Control",
+        "semester": "S6",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_eee_drives"
+      },
+      {
+        "id": "s6-mech-thermal",
+        "title": "Thermal Engineering",
+        "semester": "S6",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_mech_thermal"
+      },
+      {
+        "id": "s6-civil-steel",
+        "title": "Design of Steel Structures",
+        "semester": "S6",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s6_civil_steel"
+      },
+      {
+        "id": "s7-cse-bigdata",
+        "title": "Big Data Analytics",
+        "semester": "S7",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_cse_bigdata"
+      },
+      {
+        "id": "s7-it-iot",
+        "title": "Internet of Things",
+        "semester": "S7",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_it_iot"
+      },
+      {
+        "id": "s7-ece-microwave",
+        "title": "Microwave Engineering",
+        "semester": "S7",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_ece_microwave"
+      },
+      {
+        "id": "s7-eee-renewable",
+        "title": "Renewable Energy Sources",
+        "semester": "S7",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_eee_renewable"
+      },
+      {
+        "id": "s7-mech-robotics",
+        "title": "Robotics and Automation",
+        "semester": "S7",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_mech_robotics"
+      },
+      {
+        "id": "s7-civil-foundation",
+        "title": "Foundation Engineering",
+        "semester": "S7",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s7_civil_foundation"
+      },
+      {
+        "id": "s8-cse-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "cse",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_cse_project"
+      },
+      {
+        "id": "s8-it-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "it",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_it_project"
+      },
+      {
+        "id": "s8-ece-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "ece",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_ece_project"
+      },
+      {
+        "id": "s8-eee-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_eee_project"
+      },
+      {
+        "id": "s8-mech-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "mech",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_mech_project"
+      },
+      {
+        "id": "s8-civil-project",
+        "title": "Project Work",
+        "semester": "S8",
+        "department": "civil",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1_example_s8_civil_project"
       }
     ],
     "qnpapers": [
@@ -138,16 +706,145 @@
         "semester": "S1",
         "department": "cse",
         "type": "qnpaper",
-        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_CSE?usp=drive_link"
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_CSE"
+      },
+      {
+        "id": "s1-it-qn",
+        "title": "S1 IT Question Papers",
+        "semester": "S1",
+        "department": "it",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_IT"
+      },
+      {
+        "id": "s1-ece-qn",
+        "title": "S1 ECE Question Papers",
+        "semester": "S1",
+        "department": "ece",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_ECE"
+      },
+      {
+        "id": "s1-eee-qn",
+        "title": "S1 EEE Question Papers",
+        "semester": "S1",
+        "department": "eee",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_EEE"
+      },
+      {
+        "id": "s1-mech-qn",
+        "title": "S1 MECH Question Papers",
+        "semester": "S1",
+        "department": "mech",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_MECH"
+      },
+      {
+        "id": "s1-civil-qn",
+        "title": "S1 CIVIL Question Papers",
+        "semester": "S1",
+        "department": "civil",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S1_CIVIL"
+      },
+      {
+        "id": "s2-cse-qn",
+        "title": "S2 CSE Question Papers",
+        "semester": "S2",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S2_CSE"
+      },
+      {
+        "id": "s3-cse-qn",
+        "title": "S3 CSE Question Papers",
+        "semester": "S3",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S3_CSE"
+      },
+      {
+        "id": "s4-cse-qn",
+        "title": "S4 CSE Question Papers",
+        "semester": "S4",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S4_CSE"
+      },
+      {
+        "id": "s5-cse-qn",
+        "title": "S5 CSE Question Papers",
+        "semester": "S5",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S5_CSE"
+      },
+      {
+        "id": "s6-cse-qn",
+        "title": "S6 CSE Question Papers",
+        "semester": "S6",
+        "department": "cse",
+        "type": "qnpaper",
+        "gdrive_url": "https://drive.google.com/drive/folders/SAMPLE_QNPAPER_S6_CSE"
       }
     ],
     "scholarships": [
       {
-        "id": "scholarship-general",
-        "title": "General Scholarship Info",
+        "id": "scholarship-merit",
+        "title": "Merit Scholarship",
         "type": "scholarship",
-        "content": "Various scholarships are available for eligible students.",
-        "link": "https://gecp.ac.in/scholarships"
+        "description": "For students with excellent academic performance",
+        "link": "https://gecp.ac.in/scholarships/merit"
+      },
+      {
+        "id": "scholarship-merit-free",
+        "title": "Merit-Free Scholarship",
+        "type": "scholarship",
+        "description": "For financially backward students",
+        "link": "https://gecp.ac.in/scholarships/merit-free"
+      },
+      {
+        "id": "scholarship-pmsss",
+        "title": "Prime Minister Special Scholarship Scheme",
+        "type": "scholarship",
+        "description": "National level scholarship for engineering students",
+        "link": "https://pmsss.aicte-india.org/"
+      },
+      {
+        "id": "scholarship-sc-st",
+        "title": "SC/ST Scholarship",
+        "type": "scholarship",
+        "description": "For SC/ST category students",
+        "link": "https://gecp.ac.in/scholarships/sc-st"
+      },
+      {
+        "id": "scholarship-obc",
+        "title": "OBC Scholarship",
+        "type": "scholarship",
+        "description": "For OBC category students",
+        "link": "https://gecp.ac.in/scholarships/obc"
+      },
+      {
+        "id": "scholarship-pg",
+        "title": "Post Matric Scholarship",
+        "type": "scholarship",
+        "description": "Post matriculation scholarship for engineering programs",
+        "link": "https://gecp.ac.in/scholarships/postmatric"
+      },
+      {
+        "id": "scholarship-foreign",
+        "title": "Foreign Exchange Scholarship",
+        "type": "scholarship",
+        "description": "Scholarship for foreign language and exchange programs",
+        "link": "https://gecp.ac.in/scholarships/foreign"
+      },
+      {
+        "id": "scholarship-sports",
+        "title": "Sports Scholarship",
+        "type": "scholarship",
+        "description": "For athletes excelling in sports",
+        "link": "https://gecp.ac.in/scholarships/sports"
       }
     ]
   }
