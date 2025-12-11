@@ -364,9 +364,9 @@
 
       <!-- Resources Display -->
       <div id="resourcesContainer" class="d-none">
-        <button class="back-button" onclick="backToSemesters(); return false;">
-          <i class="bi bi-chevron-left"></i> Back to Semesters
-        </button>
+        <a href="./index.html" class="back-button">
+          <i class="bi bi-chevron-left"></i> Back to Sahayi
+        </a>
         <h2 class="section-title" id="resourcesTitle">Available Resources</h2>
         <div id="resourcesList" class="resources-list">
           <!-- Populated by JavaScript -->
@@ -407,6 +407,81 @@
   <script src="../assets/js/main.js"></script>
 
   <script>
+    // ========================================
+    // COMING SOON MODE - Question Papers
+    // ========================================
+    // When ready to release question papers:
+    // 1. Uncomment the code below
+    // 2. Add question paper data to sahayi.json
+    // 3. Comment out the "Coming Soon" display code
+    // ========================================
+
+    // Show "Coming Soon" message immediately
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hide all containers
+      document.getElementById('deptContainer').classList.add('d-none');
+      document.getElementById('semesterContainer').classList.add('d-none');
+      document.getElementById('loadingState').classList.add('hidden-container');
+      document.getElementById('errorState').classList.add('hidden-container');
+
+      // Show "Coming Soon" in resources container
+      document.getElementById('resourcesContainer').classList.remove('d-none');
+      document.getElementById('resourcesTitle').textContent = 'Question Papers';
+      document.getElementById('resourcesList').innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem;">
+          <i class="bi bi-hourglass-split" style="font-size: 5rem; color: var(--primary-red); margin-bottom: 1.5rem; display: block;"></i>
+          <h2 style="color: #1f2937; margin-bottom: 1rem; font-size: 2rem;">Coming Soon!</h2>
+          <p style="color: #666; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+            Previous year question papers will be available soon. We're working hard to organize and upload them for you.
+          </p>
+          <p style="color: #999; font-size: 1rem; margin-top: 1rem;">
+            Stay tuned for updates!
+          </p>
+        </div>
+      `;
+
+      // Update back button to go to Sahayi index
+      const backButton = document.querySelector('.back-button');
+      if (backButton) {
+        backButton.onclick = () => { window.location.href = './index.html'; };
+      }
+    });
+
+    // Mobile menu toggle
+    const headerToggle = document.querySelector('.header-toggle');
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.navmenu a');
+
+    if (headerToggle) {
+      headerToggle.addEventListener('click', () => {
+        header.classList.toggle('header-show');
+      });
+    }
+
+    // Close menu on nav link click and mark Sahayi link as active
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('header-show');
+      });
+
+      // Mark Sahayi link as active
+      if (link.textContent.includes('Sahayi') && window.location.pathname.includes('/sahayi/')) {
+        link.classList.add('active');
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && !headerToggle.contains(e.target)) {
+        header.classList.remove('header-show');
+      }
+    });
+
+    /* ========================================
+     * COMMENTED OUT - FULL FUNCTIONALITY
+     * Uncomment this section when ready to release question papers
+     * ========================================
+     
     let selectedDept = null;
     let allData = null;
 
@@ -506,7 +581,13 @@
       container.innerHTML = '';
 
       if (!allData.resources || !allData.resources.qnpapers) {
-        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+            <i class="bi bi-hourglass-split" style="font-size: 4rem; color: var(--primary-red); margin-bottom: 1rem;"></i>
+            <h3 style="color: #1f2937; margin-bottom: 0.5rem;">Coming Soon!</h3>
+            <p style="color: #666; font-size: 1.1rem;">Question papers will be available soon. Stay tuned!</p>
+          </div>
+        `;
         return;
       }
 
@@ -516,7 +597,13 @@
       );
 
       if (resources.length === 0) {
-        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+            <i class="bi bi-hourglass-split" style="font-size: 4rem; color: var(--primary-red); margin-bottom: 1rem;"></i>
+            <h3 style="color: #1f2937; margin-bottom: 0.5rem;">Coming Soon!</h3>
+            <p style="color: #666; font-size: 1.1rem;">Question papers for ${selectedDept.name} - ${semester} will be available soon. Stay tuned!</p>
+          </div>
+        `;
         return;
       }
 
@@ -583,35 +670,7 @@
     // Initialize on page load
     window.addEventListener('DOMContentLoaded', initPage);
 
-    // Mobile menu toggle
-    const headerToggle = document.querySelector('.header-toggle');
-    const header = document.getElementById('header');
-    const navLinks = document.querySelectorAll('.navmenu a');
-
-    if (headerToggle) {
-      headerToggle.addEventListener('click', () => {
-        header.classList.toggle('header-show');
-      });
-    }
-
-    // Close menu on nav link click and mark Sahayi link as active
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        header.classList.remove('header-show');
-      });
-
-      // Mark Sahayi link as active
-      if (link.textContent.includes('Sahayi') && window.location.pathname.includes('/sahayi/')) {
-        link.classList.add('active');
-      }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!header.contains(e.target) && !headerToggle.contains(e.target)) {
-        header.classList.remove('header-show');
-      }
-    });
+    ======================================== */
   </script>
 
 </body>

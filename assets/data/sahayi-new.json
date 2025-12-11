@@ -1,0 +1,265 @@
+{
+    "departments": [
+        {
+            "id": "cse",
+            "name": "Computer Science & Engineering",
+            "icon": "bi-laptop"
+        },
+        {
+            "id": "it",
+            "name": "Information Technology",
+            "icon": "bi-code-slash"
+        },
+        {
+            "id": "ece",
+            "name": "Electronics & Communication Engineering",
+            "icon": "bi-cpu"
+        },
+        {
+            "id": "eee",
+            "name": "Electrical & Electronics Engineering",
+            "icon": "bi-lightning"
+        },
+        {
+            "id": "civil",
+            "name": "Civil Engineering",
+            "icon": "bi-building"
+        },
+        {
+            "id": "mech",
+            "name": "Mechanical Engineering",
+            "icon": "bi-gear"
+        }
+    ],
+    "semesters": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+    ],
+    "notes": {
+        "cse": {
+            "S1": [
+                {
+                    "id": "s1-cse-math1",
+                    "title": "Mathematics for Information Science-1",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1Gi4qp9hK1SrRBtLxVB-tU3En3CWckfu3"
+                },
+                {
+                    "id": "s1-cse-algo",
+                    "title": "Algorithmic Thinking with Python",
+                    "gdrive_url": "https://drive.google.com/drive/folders/15DT5P0vLolf_rpp3VeH5YSuRfjWPsIKE?usp=drive_link"
+                },
+                {
+                    "id": "s1-cse-physics",
+                    "title": "Physics for Information Science",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1Dbm37gCBKZVn5kDmV3J9padiNqRwUDHf?usp=drive_link"
+                },
+                {
+                    "id": "s1-cse-chemistry",
+                    "title": "Chemistry for Information Science",
+                    "gdrive_url": "https://drive.google.com/drive/folders/159CZ1-AJNEVj8P2g4TnOR-HNUPZwOkD8?usp=drive_link"
+                },
+                {
+                    "id": "s1-cse-engr-graphics",
+                    "title": "Engineering Graphics and Computer Aided Drawing",
+                    "gdrive_url": "https://drive.google.com/drive/folders/159EIlSaq4S4fNysNOonLGu9LFHS5vw0D?usp=drive_link"
+                },
+                {
+                    "id": "s1-cse-electrical",
+                    "title": "Introduction to Electrical & Electronics Engineering",
+                    "gdrive_url": "https://drive.google.com/drive/folders/15BJ8Py7-Cvxwp9FEzy31SOf9M3ZXZ51c?usp=drive_link"
+                },
+                {
+                    "id": "s1-cse-life-skills",
+                    "title": "Life Skills and Professional Communication",
+                    "gdrive_url": "https://drive.google.com/drive/folders/15HHHRhpDxG3blNahqcRNHFWOxDolG41X?usp=drive_link"
+                }
+            ]
+        },
+        "it": {
+            "S1": [
+                {
+                    "id": "s1-it-math1",
+                    "title": "Mathematics for Information Science-1",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1Gi4qp9hK1SrRBtLxVB-tU3En3CWckfu3?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-algo",
+                    "title": "Algorithmic Thinking with Python",
+                    "gdrive_url": "https://drive.google.com/drive/folders/15DT5P0vLolf_rpp3VeH5YSuRfjWPsIKE?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-physics",
+                    "title": "Physics for Information Science",
+                    "gdrive_url": "https://drive.google.com/drive/folders/113tStRrXMVMgNeD944eJDnZPsIKkYwxs?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-chemistry",
+                    "title": "Chemistry for Information Science",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1zRCsyMeOx7VBoYRfECY18rSZ40gUZprc?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-engr-graphics",
+                    "title": "Engineering Graphics and Computer Aided Drawing",
+                    "gdrive_url": "https://drive.google.com/drive/folders/193JzS01OyDjF5DI7olHi3rjQ3BaBkgO4?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-electrical",
+                    "title": "Introduction to Electrical & Electronics Engineering",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1t1mDD40mciY0qPYVYcuxBLXPInNCXRy2?usp=drive_link"
+                },
+                {
+                    "id": "s1-it-life-skills",
+                    "title": "Life Skills and Professional Communication",
+                    "gdrive_url": "https://drive.google.com/drive/folders/10YNphte8BY8PYm4fGO_RyoH04BtFCK1P?usp=drive_link"
+                }
+            ]
+        },
+        "eee": {
+            "S1": [
+                {
+                    "id": "s1-eee-math1",
+                    "title": "Mathematics for Electrical Science-1",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1GzcvbPOgzG9j7QqNgjgc58lCvFVYTtKm?usp=drive_link"
+                }
+            ]
+        },
+        "mech": {
+            "S1": [
+                {
+                    "id": "s1-mech-mechanics",
+                    "title": "Engineering Mechanics",
+                    "gdrive_url": "https://drive.google.com/drive/folders/17JrUtDsKO0KPfYneYj6B7z-PHrbeTuwM"
+                },
+                {
+                    "id": "s1-mech-chemistry",
+                    "title": "Chemistry",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1MaHuLtWLVVx8iYbacBMn4nGryOyHtx2p"
+                },
+                {
+                    "id": "s1-mech-algo",
+                    "title": "Algorithmic Thinking with Python",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1bCh4MGYcHQVEvcvBBgFX3i5xiXAVn9VP"
+                },
+                {
+                    "id": "s1-mech-intro",
+                    "title": "Introduction to Mechanical and Civil",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1MgHJvNKbDsqYvi_1svxcO34GKSzmUE9r"
+                },
+                {
+                    "id": "s1-mech-math",
+                    "title": "Mathematics",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1uB-1cYOrRWaVSfpT6fd8O2_XNMlwZYRW"
+                }
+            ]
+        },
+        "ece": {
+            "S1": [
+                {
+                    "id": "s1-ece-algo",
+                    "title": "Algorithmic Thinking with Python",
+                    "gdrive_url": "https://drive.google.com/file/d/18KgD2EpehV583Nl01MMblseu1NNByZVy"
+                },
+                {
+                    "id": "s1-ece-chemistry",
+                    "title": "Chemistry",
+                    "gdrive_url": "https://drive.google.com/file/d/1jZ_3g5LmIAsZ9wly6Tgs8LVW0StvQsyc"
+                },
+                {
+                    "id": "s1-ece-graphics",
+                    "title": "Engineering Graphics",
+                    "gdrive_url": "https://drive.google.com/file/d/1GNJ-f3jQqRoWJGRUybakjb0NLOvES28l"
+                },
+                {
+                    "id": "s1-ece-electrical",
+                    "title": "Introduction to Electrical Engineering",
+                    "gdrive_url": "https://drive.google.com/file/d/1ZOR0py0yXilITonn1lOCLw3WL9I3eCSp"
+                },
+                {
+                    "id": "s1-ece-math",
+                    "title": "Mathematics for Electrical Science",
+                    "gdrive_url": "https://drive.google.com/file/d/1nSiiNyHub0HZufySVI40pcAH7nmtQokg"
+                }
+            ]
+        },
+        "civil": {
+            "S1": [
+                {
+                    "id": "s1-civil-chemistry",
+                    "title": "Chemistry",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1JZPoU1AM9n34CTg-jS3i3m792BDAtev1"
+                },
+                {
+                    "id": "s1-civil-intro",
+                    "title": "Introduction to Civil Engineering and Mechanical Engineering",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1K-uOyPKbaPn0Jcp1Z4z9zgvYSq4KZz_n"
+                },
+                {
+                    "id": "s1-civil-mechanics",
+                    "title": "Engineering Mechanics",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1N3YvUH0pZFBJjoyQblZ5sOYyZu005-7d"
+                },
+                {
+                    "id": "s1-civil-algo",
+                    "title": "Algorithmic Thinking with Python",
+                    "gdrive_url": "https://drive.google.com/drive/folders/1NOChMPbcVXYVSrrmgqt4i5xBvi9p7Fyt"
+                }
+            ]
+        }
+    },
+    "scholarships": [
+        {
+            "id": "scholarship-merit",
+            "title": "Merit Scholarship",
+            "description": "For students with excellent academic performance",
+            "link": "https://gecp.ac.in/scholarships/merit"
+        },
+        {
+            "id": "scholarship-merit-free",
+            "title": "Merit-Free Scholarship",
+            "description": "For financially backward students",
+            "link": "https://gecp.ac.in/scholarships/merit-free"
+        },
+        {
+            "id": "scholarship-pmsss",
+            "title": "Prime Minister Special Scholarship Scheme",
+            "description": "National level scholarship for engineering students",
+            "link": "https://pmsss.aicte-india.org/"
+        },
+        {
+            "id": "scholarship-sc-st",
+            "title": "SC/ST Scholarship",
+            "description": "For SC/ST category students",
+            "link": "https://gecp.ac.in/scholarships/sc-st"
+        },
+        {
+            "id": "scholarship-obc",
+            "title": "OBC Scholarship",
+            "description": "For OBC category students",
+            "link": "https://gecp.ac.in/scholarships/obc"
+        },
+        {
+            "id": "scholarship-pg",
+            "title": "Post Matric Scholarship",
+            "description": "Post matriculation scholarship for engineering programs",
+            "link": "https://gecp.ac.in/scholarships/postmatric"
+        },
+        {
+            "id": "scholarship-foreign",
+            "title": "Foreign Exchange Scholarship",
+            "description": "Scholarship for foreign language and exchange programs",
+            "link": "https://gecp.ac.in/scholarships/foreign"
+        },
+        {
+            "id": "scholarship-sports",
+            "title": "Sports Scholarship",
+            "description": "For athletes excelling in sports",
+            "link": "https://gecp.ac.in/scholarships/sports"
+        }
+    ]
+}

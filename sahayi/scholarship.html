@@ -28,7 +28,12 @@
       background-color: #f9fafb;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Raleway', sans-serif;
       font-weight: 700;
     }
@@ -206,8 +211,13 @@
     }
 
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .error-message {
@@ -243,7 +253,7 @@
       .main {
         margin-left: 300px;
       }
-      
+
       .footer-sahayi {
         margin-left: 300px;
       }
@@ -275,7 +285,8 @@
 
 <body>
 
-  <i class="header-toggle d-xl-none bi bi-list" style="position: fixed; top: 15px; right: 15px; z-index: 9999; font-size: 22px; cursor: pointer; color: #dc2626; background: white; padding: 8px 12px; border-radius: 4px;"></i>
+  <i class="header-toggle d-xl-none bi bi-list"
+    style="position: fixed; top: 15px; right: 15px; z-index: 9999; font-size: 22px; cursor: pointer; color: #dc2626; background: white; padding: 8px 12px; border-radius: 4px;"></i>
 
   <!-- Header (Sidebar) -->
   <header id="header" class="header dark-background d-flex flex-column">
@@ -288,7 +299,8 @@
     <div class="social-links text-center">
       <a href="https://www.facebook.com/sfigecpkd" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
       <a href="http://wa.me/+917994134028" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.instagram.com/sfigecp?igsh=eHJob2MwMm16OHdo" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.instagram.com/sfigecp?igsh=eHJob2MwMm16OHdo" class="instagram" target="_blank"><i
+          class="bi bi-instagram"></i></a>
     </div>
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -306,14 +318,14 @@
     <!-- Hero Section -->
     <section class="hero-sahayi">
       <h1>Scholarships</h1>
-      <p>Select your department to view available scholarship opportunities</p>
+      <p>Explore available scholarship opportunities for students</p>
     </section>
 
     <!-- Content -->
     <div class="content-wrapper">
 
       <!-- Department Selection -->
-      <div id="deptContainer" class="visible-container">
+      <div id="deptContainer" class="hidden-container">
         <a href="./index.html" class="back-button">
           <i class="bi bi-chevron-left"></i> Back to Sahayi
         </a>
@@ -336,10 +348,10 @@
 
       <!-- Resources Display -->
       <div id="resourcesContainer" class="hidden-container">
-        <button class="back-button" onclick="resetSelection(); return false;">
-          <i class="bi bi-chevron-left"></i> Choose Another Department
-        </button>
-        <h2 class="section-title" id="resourcesTitle">Available Resources</h2>
+        <a href="./index.html" class="back-button">
+          <i class="bi bi-chevron-left"></i> Back to Sahayi
+        </a>
+        <h2 class="section-title" id="resourcesTitle">Available Scholarships</h2>
         <div id="resourcesList" class="resources-list">
           <!-- Populated by JavaScript -->
         </div>
@@ -355,7 +367,8 @@
         <div class="error-message">
           <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Error Loading Resources</h3>
           <p id="errorMessage" style="margin: 0;">Failed to load scholarships. Please try again.</p>
-          <button onclick="location.reload()" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--primary-red); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
+          <button onclick="location.reload()"
+            style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--primary-red); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
             Retry
           </button>
         </div>
@@ -366,7 +379,8 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="footer-sahayi" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; text-align: center; margin-top: 3rem;">
+  <footer id="footer" class="footer-sahayi"
+    style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; text-align: center; margin-top: 3rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <p style="margin: 0; opacity: 0.9;">&copy; 2025 SFI GEC Palakkad. All rights reserved.</p>
     </div>
@@ -377,134 +391,59 @@
   <script src="../assets/js/main.js"></script>
 
   <script>
-    let selectedDept = null;
     let allData = null;
 
     async function initPage() {
       try {
         document.getElementById('loadingState').classList.remove('hidden-container');
-        
+
         const response = await fetch('../assets/data/sahayi.json');
         if (!response.ok) throw new Error('Failed to load data');
-        
+
         allData = await response.json();
         document.getElementById('loadingState').classList.add('hidden-container');
-        renderDepartments();
-        
+
+        // Hide department and semester containers
+        document.getElementById('deptContainer').classList.add('hidden-container');
+        document.getElementById('semesterContainer').classList.add('hidden-container');
+
+        // Show scholarships directly
+        document.getElementById('resourcesContainer').classList.remove('hidden-container');
+        document.getElementById('resourcesTitle').textContent = 'Available Scholarships';
+        renderScholarships();
+
       } catch (error) {
         document.getElementById('loadingState').classList.add('hidden-container');
         document.getElementById('errorState').classList.remove('hidden-container');
-        document.getElementById('errorMessage').textContent = error.message || 'Failed to load resources';
+        document.getElementById('errorMessage').textContent = error.message || 'Failed to load scholarships';
       }
     }
 
-    function renderDepartments() {
-      const container = document.getElementById('departmentCards');
-      if (!allData || !allData.departments) {
-        container.innerHTML = '<p style="color: #dc2626;">Error loading departments. Please refresh the page.</p>';
-        return;
-      }
-
-      container.innerHTML = '';
-
-      allData.departments.forEach(dept => {
-        const card = document.createElement('div');
-        card.className = 'dept-card';
-        card.onclick = () => selectDepartment(dept.id, dept.name);
-        card.innerHTML = `
-          <div class="dept-card-icon">
-            <i class="bi ${dept.icon || 'bi-book'}"></i>
-          </div>
-          <div class="dept-card-name">${dept.name}</div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function selectDepartment(deptId, deptName) {
-      selectedDept = { id: deptId, name: deptName };
-      document.getElementById('deptContainer').classList.add('hidden-container');
-      document.getElementById('semesterContainer').classList.remove('hidden-container');
-      document.getElementById('semesterTitle').textContent = `${deptName} - Select Semester`;
-      renderSemesters();
-      window.scrollTo(0, 0);
-    }
-
-    function renderSemesters() {
-      const container = document.getElementById('semesterCards');
-      container.innerHTML = '';
-
-      if (!allData.semesters) return;
-
-      allData.semesters.forEach(sem => {
-        const card = document.createElement('button');
-        card.className = 'semester-card';
-        card.style.cssText = 'background: white; border: 2px solid #e5e7eb; border-radius: 8px; padding: 1rem; text-align: center; cursor: pointer; font-weight: 600; color: #374151; transition: all 0.3s ease;';
-        card.textContent = sem;
-        card.onmouseover = () => {
-          card.style.borderColor = 'var(--primary-red)';
-          card.style.backgroundColor = 'var(--primary-light)';
-        };
-        card.onmouseout = () => {
-          card.style.borderColor = '#e5e7eb';
-          card.style.backgroundColor = 'white';
-        };
-        card.onclick = () => selectSemester(sem);
-        container.appendChild(card);
-      });
-    }
-
-    function selectSemester(semester) {
-      document.getElementById('semesterContainer').classList.add('hidden-container');
-      document.getElementById('resourcesContainer').classList.remove('hidden-container');
-      document.getElementById('resourcesTitle').textContent = `${selectedDept.name} - ${semester} Resources`;
-
-      renderResources(semester);
-    }
-
-    function renderResources(semester) {
+    function renderScholarships() {
       const container = document.getElementById('resourcesList');
       container.innerHTML = '';
 
-      if (!allData.resources || !allData.resources.scholarships) {
-        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
+      if (!allData.scholarships || allData.scholarships.length === 0) {
+        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No scholarships available at the moment. Please check back later!</p>';
         return;
       }
 
-      // Filter resources by department and semester (scholarships may not have semester filtering, but we keep it for consistency)
-      const resources = allData.resources.scholarships.filter(r => 
-        (!r.department || r.department === selectedDept.id) && (!r.semester || r.semester === semester)
-      );
-
-      if (resources.length === 0) {
-        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
-        return;
-      }
-
-      resources.forEach(resource => {
+      allData.scholarships.forEach(scholarship => {
         const card = document.createElement('a');
-        card.href = resource.gdrive_url || resource.link || '#';
+        card.href = scholarship.link || '#';
         card.target = '_blank';
         card.rel = 'noopener noreferrer';
         card.className = 'resource-card';
         card.style.textDecoration = 'none';
         card.innerHTML = `
-          <div class="resource-title">${resource.title}</div>
-          <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0;">${resource.description || ''}</p>
-          <a href="${resource.gdrive_url || resource.link || '#'}" target="_blank" class="resource-link">
+          <div class="resource-title">${scholarship.title}</div>
+          <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0;">${scholarship.description || ''}</p>
+          <span class="resource-link">
             <i class="bi bi-link-45deg"></i> Learn More
-          </a>
+          </span>
         `;
         container.appendChild(card);
       });
-    }
-
-    function resetSelection() {
-      selectedDept = null;
-      document.getElementById('deptContainer').classList.remove('hidden-container');
-      document.getElementById('semesterContainer').classList.add('hidden-container');
-      document.getElementById('resourcesContainer').classList.add('hidden-container');
-      window.scrollTo(0, 0);
     }
 
     // Initialize on page load
@@ -514,7 +453,7 @@
     const headerToggle = document.querySelector('.header-toggle');
     const header = document.getElementById('header');
     const navLinks = document.querySelectorAll('.navmenu a');
-    
+
     if (headerToggle) {
       headerToggle.addEventListener('click', () => {
         header.classList.toggle('header-show');
