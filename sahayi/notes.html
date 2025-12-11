@@ -7,35 +7,29 @@
   <title>Study Notes - Sahayi</title>
   <meta name="description" content="Study notes organized by department and semester">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#dc2626',
-            'primary-dark': '#991b1b',
-            'primary-light': '#fee2e2'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Favicons -->
+  <link href="../assets/img/favicon1.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap"
-    rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- Site CSS -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/index.css" rel="stylesheet">
 
   <style>
-    * {
+    :root {
+      --primary-red: #dc2626;
+      --primary-dark: #991b1b;
+      --primary-light: #fee2e2;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
     }
 
     h1,
@@ -48,119 +42,396 @@
       font-weight: 700;
     }
 
-    .gradient-primary {
-      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    .hero-sahayi {
+      background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .hero-sahayi h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sahayi p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     .dept-card {
-      @apply bg-white rounded-xl shadow-lg p-6 cursor-pointer border-l-4 border-primary hover:shadow-2xl hover:scale-105 transform transition duration-300;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--primary-red);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 150px;
     }
 
-    .dept-card:focus {
-      @apply outline-none ring-2 ring-primary ring-offset-2;
+    .dept-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      border-left-color: var(--primary-dark);
+    }
+
+    .dept-card-icon {
+      font-size: 2.5rem;
+      color: var(--primary-red);
+      margin-bottom: 0.5rem;
+    }
+
+    .dept-card-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .dept-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .dept-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .semester-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .semester-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .semester-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid #e5e7eb;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .semester-card:hover {
+      border-color: var(--primary-red);
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .semester-card.active {
+      background-color: var(--primary-red);
+      color: white;
+      border-color: var(--primary-dark);
+    }
+
+    .resources-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .resource-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border-top: 4px solid var(--primary-red);
+    }
+
+    .resource-card:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      transform: translateY(-5px);
+    }
+
+    .resource-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    .resource-link {
+      display: inline-block;
+      color: white;
+      background-color: var(--primary-red);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .resource-link:hover {
+      background-color: var(--primary-dark);
+      transform: translateX(2px);
+    }
+
+    .hidden-container {
+      display: none;
+    }
+
+    .visible-container {
+      display: block;
+    }
+
+    .loading-spinner {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .spinner {
+      border: 4px solid var(--primary-light);
+      border-top: 4px solid var(--primary-red);
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .error-message {
+      background-color: #fee2e2;
+      border-left: 4px solid var(--primary-red);
+      color: var(--primary-dark);
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .back-button {
+      color: var(--primary-red);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    .back-button:hover {
+      color: var(--primary-dark);
+      transform: translateX(-3px);
+    }
+
+    @media (min-width: 1200px) {
+      .main {
+        margin-left: 300px;
+      }
+
+      .footer-sahayi {
+        margin-left: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-sahayi h1 {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .dept-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .semester-cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .resources-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
-<body class="bg-gray-50">
+<body>
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition" aria-label="Go to homepage">
-        <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-          <i class="bi bi-book-fill text-white text-lg"></i>
-        </div>
-        <h1 class="text-xl font-bold text-gray-900">SFI GECP</h1>
-      </a>
+  <i class="header-toggle d-xl-none bi bi-list"
+    style="position: fixed; top: 15px; right: 15px; z-index: 9999; font-size: 22px; cursor: pointer; color: #dc2626; background: white; padding: 8px 12px; border-radius: 4px;"></i>
 
-      <a href="./index.html" class="text-primary hover:text-primary-dark font-semibold"
-        aria-label="Back to Sahayi hub">← Back</a>
+  <!-- Header (Sidebar) -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <div class="profile-img">
+      <img src="../assets/img/logo.jpg" alt="SFI GECP" class="img-fluid rounded-circle">
+    </div>
+    <a href="../index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">SFI GEC PALAKKAD</h1>
+    </a>
+    <div class="social-links text-center">
+      <a href="https://www.facebook.com/sfigecpkd" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="http://wa.me/+917994134028" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/sfigecp?igsh=eHJob2MwMm16OHdo" class="instagram" target="_blank"><i
+          class="bi bi-instagram"></i></a>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="../index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="../index.html#unit-committee"><i class="bi bi-people navicon"></i> Unit Committee</a></li>
+        <li><a href="./index.html"><i class="bi bi-book navicon"></i> Sahayi</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="gradient-primary text-white py-12 px-4">
-    <div class="max-w-5xl mx-auto">
-      <h1 class="text-4xl font-bold mb-2">Study Notes</h1>
-      <p class="text-lg opacity-90">Select your department to view available study materials</p>
-    </div>
-  </section>
+  <main class="main">
 
-  <!-- Main Content -->
-  <section class="py-16 px-4">
-    <div class="max-w-6xl mx-auto">
+    <!-- Hero Section -->
+    <section class="hero-sahayi">
+      <h1>Study Notes</h1>
+      <p>Select your department to view available study materials</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content-wrapper">
 
       <!-- Department Selection -->
-      <div id="deptContainer" class="mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">Choose Your Department</h2>
-        <div id="departmentCards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Cards will be populated by JavaScript -->
+      <div id="deptContainer">
+        <a href="./index.html" class="back-button">
+          <i class="bi bi-chevron-left"></i> Back to Sahayi
+        </a>
+        <h2 class="section-title">Choose Your Department</h2>
+        <div id="departmentCards" class="dept-cards-grid">
+          <!-- Populated by JavaScript -->
         </div>
       </div>
 
-      <!-- Semester Selection (Hidden initially) -->
-      <div id="semesterContainer" class="mb-16 hidden">
-        <div class="mb-8">
-          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4"
-            aria-label="Change department">
-            ← Change Department
-          </button>
-          <h2 id="semesterTitle" class="text-3xl font-bold text-gray-900">Select Semester</h2>
-        </div>
-
-        <div id="semesterCards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Semester cards will be populated by JavaScript -->
+      <!-- Semester Selection -->
+      <div id="semesterContainer" class="d-none">
+        <button class="back-button" onclick="resetSelection(); return false;">
+          <i class="bi bi-chevron-left"></i> Change Department
+        </button>
+        <h2 class="section-title" id="semesterTitle">Select Semester</h2>
+        <div id="semesterCards" class="semester-cards-grid">
+          <!-- Populated by JavaScript -->
         </div>
       </div>
 
-      <!-- Resources List (Hidden initially) -->
-      <div id="resourcesContainer" class="mb-16 hidden">
-        <div class="mb-8">
-          <button onclick="resetSelection()" class="text-primary hover:text-primary-dark font-semibold mb-4"
-            aria-label="Choose another department">
-            ← Choose Another Department
-          </button>
-          <h2 id="resourcesTitle" class="text-3xl font-bold text-gray-900">Available Resources</h2>
+      <!-- Resources Display -->
+      <div id="resourcesContainer" class="d-none">
+        <button class="back-button" onclick="backToSemesters(); return false;">
+          <i class="bi bi-chevron-left"></i> Back to Semesters
+        </button>
+        <h2 class="section-title" id="resourcesTitle">Available Resources</h2>
+        <div id="resourcesList" class="resources-list">
+          <!-- Populated by JavaScript -->
         </div>
+      </div>
 
-        <div id="resourcesList" class="space-y-4">
-          <!-- Resources will be populated by JavaScript -->
+      <!-- Loading & Error States -->
+      <div id="loadingState" class="loading-spinner hidden-container">
+        <div class="spinner"></div>
+        <p style="margin-top: 1rem; color: #666;">Loading resources...</p>
+      </div>
+
+      <div id="errorState" class="hidden-container">
+        <div class="error-message">
+          <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Error Loading Resources</h3>
+          <p id="errorMessage" style="margin: 0;">Failed to load study resources. Please try again.</p>
+          <button onclick="location.reload()"
+            style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--primary-red); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
+            Retry
+          </button>
         </div>
       </div>
 
     </div>
-  </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer class="gradient-primary text-white py-12 px-4 mt-20">
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="opacity-80">&copy; 2025 SFI GEC Palakkad. All rights reserved.</p>
+  <footer id="footer" class="footer-sahayi"
+    style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; text-align: center; margin-top: 3rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <p style="margin: 0; opacity: 0.9;">&copy; 2025 SFI GEC Palakkad. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Enhanced Sahayi Navigator Script -->
-  <script src="../assets/js/sahayi.js"></script>
+  <!-- Scripts -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
 
   <script>
     let selectedDept = null;
     let allData = null;
 
     async function initPage() {
-      // Use the enhanced SahayiNavigator from sahayi.js
-      if (window.sahayiNavigator && window.sahayiNavigator.data) {
-        allData = window.sahayiNavigator.data;
+      try {
+        document.getElementById('loadingState').classList.remove('hidden-container');
+
+        const response = await fetch('../assets/data/sahayi.json');
+        if (!response.ok) throw new Error('Failed to load data');
+
+        allData = await response.json();
+        document.getElementById('loadingState').classList.add('hidden-container');
         renderDepartments();
-      } else {
-        // Fallback: wait for navigator to initialize
-        setTimeout(initPage, 100);
+
+      } catch (error) {
+        document.getElementById('loadingState').classList.add('hidden-container');
+        document.getElementById('errorState').classList.remove('hidden-container');
+        document.getElementById('errorMessage').textContent = error.message || 'Failed to load resources';
       }
     }
 
     function renderDepartments() {
       const container = document.getElementById('departmentCards');
       if (!allData || !allData.departments) {
-        container.innerHTML = '<p class="text-red-500 col-span-full">Error loading departments. Please refresh the page.</p>';
+        container.innerHTML = '<p style="color: #dc2626;">Error loading departments. Please refresh the page.</p>';
         return;
       }
 
@@ -169,117 +440,178 @@
       allData.departments.forEach(dept => {
         const card = document.createElement('div');
         card.className = 'dept-card';
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `Select ${dept.name} department`);
-        card.innerHTML = `
-          <div class="flex items-center gap-4">
-            <div class="w-14 h-14 bg-primary-light rounded-lg flex items-center justify-center">
-              <i class="bi ${dept.icon} text-primary text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-900 text-lg">${dept.name}</h3>
-              <p class="text-gray-600 text-sm">Select to view notes</p>
-            </div>
-          </div>
-        `;
-
-        // Click handler
         card.onclick = () => selectDepartment(dept.id, dept.name);
-
-        // Keyboard handler
-        card.onkeypress = (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            selectDepartment(dept.id, dept.name);
-          }
-        };
-
+        card.innerHTML = `
+          <div class="dept-card-icon">
+            <i class="bi ${dept.icon || 'bi-book'}"></i>
+          </div>
+          <div class="dept-card-name">${dept.name}</div>
+        `;
         container.appendChild(card);
       });
     }
 
     function selectDepartment(deptId, deptName) {
       selectedDept = { id: deptId, name: deptName };
-      document.getElementById('deptContainer').style.display = 'none';
-      document.getElementById('semesterContainer').style.display = 'block';
+
+      // SPA-style view replacement: hide departments, show semesters
+      document.getElementById('deptContainer').classList.add('d-none');
+      document.getElementById('semesterContainer').classList.remove('d-none');
+
       document.getElementById('semesterTitle').textContent = `${deptName} - Select Semester`;
       renderSemesters();
-      window.scrollTo(0, 0);
+
+      // Scroll to top for immediate visibility
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function renderSemesters() {
       const container = document.getElementById('semesterCards');
       container.innerHTML = '';
 
-      allData.semesters.forEach(semester => {
+      if (!allData.semesters) return;
+
+      allData.semesters.forEach(sem => {
         const card = document.createElement('button');
-        card.className = 'bg-white rounded-lg shadow-md p-4 hover:shadow-lg hover:bg-primary-light transition text-center font-bold text-primary-dark hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2';
-        card.textContent = semester;
-        card.setAttribute('aria-label', `View ${semester} resources`);
-        card.onclick = () => selectSemester(semester);
-        card.onkeypress = (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            selectSemester(semester);
-          }
+        card.className = 'semester-card';
+        card.style.cssText = 'background: white; border: 2px solid #e5e7eb; border-radius: 8px; padding: 1rem; text-align: center; cursor: pointer; font-weight: 600; color: #374151; transition: all 0.3s ease;';
+        card.textContent = sem;
+        card.onmouseover = () => {
+          card.style.borderColor = 'var(--primary-red)';
+          card.style.backgroundColor = 'var(--primary-light)';
         };
+        card.onmouseout = () => {
+          card.style.borderColor = '#e5e7eb';
+          card.style.backgroundColor = 'white';
+        };
+        card.onclick = () => selectSemester(sem);
         container.appendChild(card);
       });
     }
 
     function selectSemester(semester) {
+      // SPA-style view replacement: hide semesters, show resources
+      document.getElementById('semesterContainer').classList.add('d-none');
+      document.getElementById('resourcesContainer').classList.remove('d-none');
+
+      document.getElementById('resourcesTitle').textContent = `${selectedDept.name} - ${semester} Resources`;
+      renderResources(semester);
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderResources(semester) {
+      const container = document.getElementById('resourcesList');
+      container.innerHTML = '';
+
+      if (!allData.resources || !allData.resources.notes) {
+        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
+        return;
+      }
+
+      // Filter resources by department and semester
       const resources = allData.resources.notes.filter(r =>
         r.department === selectedDept.id && r.semester === semester
       );
 
-      document.getElementById('semesterContainer').style.display = 'none';
-      document.getElementById('resourcesContainer').style.display = 'block';
-      document.getElementById('resourcesTitle').textContent = `${selectedDept.name} - ${semester} Notes`;
-
-      renderResources(resources);
-      window.scrollTo(0, 0);
-    }
-
-    function renderResources(resources) {
-      const container = document.getElementById('resourcesList');
-      container.innerHTML = '';
-
       if (resources.length === 0) {
-        container.innerHTML = '<p class="text-gray-600 text-lg">No resources available for this selection yet. Please check back later!</p>';
+        container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No resources available for this selection yet. Please check back later!</p>';
         return;
       }
 
       resources.forEach(resource => {
-        const item = document.createElement('a');
-        item.href = resource.gdrive_url;
-        item.target = '_blank';
-        item.rel = 'noopener noreferrer';
-        item.className = 'block bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:bg-primary-light transition border-l-4 border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2';
-        item.setAttribute('aria-label', `Open ${resource.title} on Google Drive`);
-        item.innerHTML = `
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-bold text-gray-900 text-lg">${resource.title}</h3>
-              <p class="text-gray-600 text-sm mt-1">Click to open in Google Drive</p>
+        const card = document.createElement('a');
+        card.href = resource.gdrive_url || resource.link || '#';
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+        card.className = 'text-decoration-none d-block mb-3 p-3 bg-white rounded-3 shadow-sm border-start border-danger border-4';
+        card.style.cssText = 'transition: all 0.3s ease;';
+
+        card.innerHTML = `
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="flex-grow-1">
+              <h5 class="fw-bold text-dark mb-2">
+                ${resource.title}
+              </h5>
+              <p class="text-muted small mb-0">
+                Click to open in Google Drive
+              </p>
             </div>
-            <i class="bi bi-box-arrow-up-right text-primary text-2xl"></i>
+            <div class="ms-3">
+              <i class="bi bi-box-arrow-up-right text-danger fs-5"></i>
+            </div>
           </div>
         `;
-        container.appendChild(item);
+
+        // Hover effect
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-4px)';
+          card.style.boxShadow = '0 0.5rem 1rem rgba(0, 0, 0, 0.15)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0)';
+          card.style.boxShadow = '';
+        });
+
+        container.appendChild(card);
       });
+    }
+
+    function backToSemesters() {
+      // SPA-style view replacement: hide resources, show semesters
+      document.getElementById('resourcesContainer').classList.add('d-none');
+      document.getElementById('semesterContainer').classList.remove('d-none');
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function resetSelection() {
       selectedDept = null;
-      document.getElementById('deptContainer').style.display = 'block';
-      document.getElementById('semesterContainer').style.display = 'none';
-      document.getElementById('resourcesContainer').style.display = 'none';
-      window.scrollTo(0, 0);
+
+      // SPA-style view replacement: show departments, hide others
+      document.getElementById('deptContainer').classList.remove('d-none');
+      document.getElementById('semesterContainer').classList.add('d-none');
+      document.getElementById('resourcesContainer').classList.add('d-none');
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Initialize page on load
+    // Initialize on page load
     window.addEventListener('DOMContentLoaded', initPage);
+
+    // Mobile menu toggle
+    const headerToggle = document.querySelector('.header-toggle');
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.navmenu a');
+
+    if (headerToggle) {
+      headerToggle.addEventListener('click', () => {
+        header.classList.toggle('header-show');
+      });
+    }
+
+    // Close menu on nav link click and mark Sahayi link as active
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('header-show');
+      });
+
+      // Mark Sahayi link as active
+      if (link.textContent.includes('Sahayi') && window.location.pathname.includes('/sahayi/')) {
+        link.classList.add('active');
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && !headerToggle.contains(e.target)) {
+        header.classList.remove('header-show');
+      }
+    });
   </script>
 
 </body>

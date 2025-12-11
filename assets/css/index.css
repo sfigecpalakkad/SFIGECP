@@ -19,7 +19,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -108,7 +109,9 @@ html, body {
 
 .typed {
     color: #fff;
-    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    font-weight: 500;
     display: inline-block;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);
     padding-bottom: 6px;
@@ -633,10 +636,11 @@ footer .container {
 }
 
 @media (min-width: 1200px) {
-  main,
-  footer {
-    margin-left: 300px;
-  }
+
+    main,
+    footer {
+        margin-left: 300px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -702,7 +706,7 @@ footer .container {
     }
 
     .typed {
-        font-size: 16px;
+        font-size: 24px;
     }
 }
 
