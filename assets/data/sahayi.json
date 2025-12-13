@@ -156,12 +156,44 @@
         "gdrive_url": "https://drive.google.com/drive/folders/10YNphte8BY8PYm4fGO_RyoH04BtFCK1P?usp=drive_link"
       },
       {
-        "id": "s1-eee-math1",
-        "title": "Mathematics for Electrical Science-1",
+        "id": "s1-eee-algo",
+        "title": "Algorithmic Thinking with Python",
         "semester": "S1",
         "department": "eee",
         "type": "note",
-        "gdrive_url": "https://drive.google.com/drive/folders/1GzcvbPOgzG9j7QqNgjgc58lCvFVYTtKm?usp=drive_link"
+        "gdrive_url": "https://drive.google.com/file/d/18KgD2EpehV583Nl01MMblseu1NNByZVy"
+      },
+      {
+        "id": "s1-eee-phy",
+        "title": "Physics",
+        "semester": "S1",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1swF-DVnWxxhEnQFTJKSOyiTIcvEqygIH"
+      },
+      {
+        "id": "s1-eee-engr-graphics",
+        "title": "Engineering Graphics",
+        "semester": "S1",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1GNJ-f3jQqRoWJGRUybakjb0NLOvES28l"
+      },
+      {
+        "id": "s1-eee-electrical",
+        "title": "Introduction to Electrical & Electronics Engineering",
+        "semester": "S1",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/drive/folders/1Gjxr_Cf5ez7A8urWUeB_NlaB-QWZia4Q"
+      },
+      {
+        "id": "s1-eee-math",
+        "title": "Mathematics for Electrical Science",
+        "semester": "S1",
+        "department": "eee",
+        "type": "note",
+        "gdrive_url": "https://drive.google.com/file/d/1nSiiNyHub0HZufySVI40pcAH7nmtQokg"
       },
       {
         "id": "s1-mech-mechanics",
