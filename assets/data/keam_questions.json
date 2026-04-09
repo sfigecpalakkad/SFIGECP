@@ -1,0 +1,1963 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q2)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 2,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q3)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q4)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 4,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q5)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q6)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 6,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q7)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 7,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q8)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 8,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q9)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 9,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q10)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 10,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q11)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 11,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q12)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 12,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q13)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 13,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q14)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 14,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q15)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 15,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q16)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 16,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q17)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 17,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q18)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 18,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q19)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 19,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q20)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 20,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q21)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 21,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q22)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 22,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q23)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 23,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q24)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 24,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q25)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 25,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q26)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q27)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q28)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q29)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q30)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q31)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q32)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q33)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q34)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q35)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q36)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q37)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q38)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q39)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q40)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q41)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q42)",
+      "options": [
+        "12.5 m",
+        "25 m",
+        "10 m",
+        "50 m",
+        "20 m"
+      ],
+      "answer": 0,
+      "explanation": "Initial KE = 490 J. Half KE = 245 J. The other half (245 J) is converted to PE. mgh = 245 => 2 * 9.8 * h = 245 => 19.6 * h = 245 => h = 12.5 m."
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "question": "The dimensional formula for angular momentum is: (Q43)",
+      "options": [
+        "[ML²T⁻¹]",
+        "[MLT⁻¹]",
+        "[ML²T⁻²]",
+        "[M²L²T⁻¹]",
+        "[ML²T]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q44)",
+      "options": [
+        "0.12 m",
+        "0.24 m",
+        "0.36 m",
+        "0.06 m",
+        "0.48 m"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "question": "The work done in stretching a spring of force constant k by a length x is: (Q45)",
+      "options": [
+        "kx²/2",
+        "kx",
+        "2kx",
+        "kx²",
+        "k/2x"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q46)",
+      "options": [
+        "−Q/4",
+        "Q/4",
+        "−Q/2",
+        "Q/2",
+        "−Q"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 46,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q47)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 47,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q48)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 48,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q49)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 49,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q50)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 50,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q51)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q52)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q53)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q54)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q55)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q56)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q57)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q58)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q59)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q60)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q61)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q62)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q63)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q64)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q65)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q66)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q67)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q68)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q69)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q70)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q71)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of the compound CH₃-CH(OH)-CH₃ is: (Q72)",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "2-methylethanol",
+        "Isopropanol",
+        "2-propanol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "question": "Which of the following has the highest electronegativity? (Q73)",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine",
+        "Bromine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "question": "The hybridisation of carbon in diamond is: (Q74)",
+      "options": [
+        "sp³",
+        "sp²",
+        "sp",
+        "sp³d",
+        "sp²d"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "question": "pH of 0.001 M HCl solution is: (Q75)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "question": "Which gas is produced when zinc reacts with dilute H₂SO₄? (Q76)",
+      "options": [
+        "H₂",
+        "SO₂",
+        "H₂S",
+        "O₂",
+        "SO₃"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 76,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q77)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 77,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q78)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 78,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q79)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 79,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q80)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 80,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q81)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 81,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q82)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 82,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q83)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 83,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q84)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 84,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q85)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 85,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q86)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 86,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q87)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 87,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q88)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 88,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q89)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 89,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q90)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 90,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q91)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 91,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q92)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 92,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q93)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 93,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q94)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 94,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q95)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 95,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q96)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 96,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q97)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 97,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q98)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 98,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q99)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 99,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q100)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 100,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q101)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 101,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q102)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 102,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q103)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 103,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q104)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 104,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q105)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 105,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q106)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 106,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q107)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 107,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q108)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 108,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q109)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 109,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q110)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 110,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q111)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 111,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q112)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 112,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q113)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 113,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q114)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 114,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q115)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 115,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q116)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 116,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q117)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 117,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q118)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 118,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q119)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 119,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q120)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 120,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q121)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 121,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q122)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 122,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q123)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 123,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q124)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 124,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q125)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 125,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q126)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 126,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q127)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 127,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q128)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 128,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q129)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 129,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q130)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 130,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q131)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 131,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q132)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 132,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q133)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 133,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q134)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 134,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q135)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 135,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q136)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 136,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q137)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 137,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q138)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 138,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q139)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 139,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q140)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 140,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q141)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 141,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q142)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 142,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q143)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 143,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q144)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 144,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q145)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 145,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q146)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 146,
+      "subject": "Mathematics",
+      "question": "If f(x) = x² − 4x + 4, then the minimum value of f(x) is: (Q147)",
+      "options": [
+        "0",
+        "−4",
+        "4",
+        "−2",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 147,
+      "subject": "Mathematics",
+      "question": "The number of solutions of sin x = x/π for x ∈ [−π, π] is: (Q148)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 148,
+      "subject": "Mathematics",
+      "question": "∫(2x + 3)dx from 0 to 2 equals: (Q149)",
+      "options": [
+        "10",
+        "8",
+        "12",
+        "6",
+        "14"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 149,
+      "subject": "Mathematics",
+      "question": "The slope of the line passing through (1, 2) and (3, 8) is: (Q150)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 150,
+      "subject": "Mathematics",
+      "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B is: (Q151)",
+      "options": [
+        "{2,3}",
+        "{1,2,3,4}",
+        "{1}",
+        "{4}",
+        "{1,4}"
+      ],
+      "answer": 0
+    }
+  ]
+}

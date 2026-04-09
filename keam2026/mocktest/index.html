@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEAM Mock Test — SFI GEC Palakkad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #121212;
+            --surface2: #1e1e1e;
+            --border: #333333;
+            --accent: #cc0000; /* SFI Red */
+            --accent-glow: rgba(204, 0, 0, 0.3);
+            --text: #ffffff;
+            --muted: #888888;
+            --green: #2ecc71;
+            --font: 'Sora', sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--surface);
+            border-bottom: 2px solid var(--accent);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; flex: 1; }
+        .brand span { color: var(--accent); }
+        .back-hub { font-size: 0.8rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 5px; margin-right: 2rem; }
+        .back-hub:hover { color: var(--accent); }
+
+        .timer-box {
+            font-family: var(--mono);
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        /* Question Area */
+        .q-area {
+            padding: 2rem;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .subject-tabs {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .sub-tab {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 0.6rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+            font-size: 0.85rem;
+        }
+
+        .sub-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .q-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border-left: 5px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .q-meta { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase; }
+
+        .q-text { font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; }
+
+        .options-grid { display: grid; gap: 1rem; }
+
+        .option-btn {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 1.2rem;
+            border-radius: 10px;
+            color: var(--text);
+            text-align: left;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .option-btn:hover { border-color: var(--accent); background: rgba(204, 0, 0, 0.05); }
+
+        .option-btn.selected {
+            border-color: var(--accent);
+            background: rgba(204, 0, 0, 0.1);
+            color: white;
+            box-shadow: inset 0 0 10px var(--accent-glow);
+        }
+
+        .option-mark {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .selected .option-mark { background: var(--accent); border-color: var(--accent); color: white; }
+
+        /* Sidebar Palette */
+        .sidebar {
+            background: var(--surface);
+            border-left: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .stat-item {
+            background: var(--bg);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-val { font-family: var(--mono); font-weight: 700; font-size: 1.1rem; }
+        .stat-lbl { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; margin-top: 4px; }
+
+        .stat-item.ans { border-color: var(--green); color: var(--green); }
+        .stat-item.rev { border-color: #f1c40f; color: #f1c40f; }
+
+        .palette-title { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            overflow-y: auto;
+            max-height: 400px;
+            padding-right: 5px;
+        }
+
+        .pal-btn {
+            aspect-ratio: 1;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+
+        .pal-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .pal-btn.current { border-color: var(--accent); background: var(--surface2); color: white; border-width: 2px; }
+        .pal-btn.answered { background: var(--green); border-color: var(--green); color: black; font-weight: 800; }
+        .pal-btn.marked { background: #f1c40f; border-color: #f1c40f; color: black; font-weight: 800; }
+        .pal-btn.visited:not(.answered):not(.marked) { color: var(--accent); border-color: var(--accent); }
+
+        /* Actions Bar */
+        .actions {
+            background: var(--surface);
+            padding: 1rem 2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            z-index: 100;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid transparent;
+            font-family: var(--font);
+            transition: 0.2s;
+        }
+
+        .btn-prev { background: var(--surface2); color: white; border-color: var(--border); }
+        .btn-next { background: var(--accent); color: white; border-color: var(--accent); }
+        .btn-mark { background: transparent; color: #f1c40f; border-color: #f1c40f; }
+        .btn-clear { background: transparent; color: var(--muted); border-color: var(--border); }
+        .btn-submit { background: var(--green); color: black; border-color: var(--green); margin-left: auto; }
+
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+
+        /* Result View */
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--surface);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .modal-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent); }
+        .modal-text { color: var(--muted); margin-bottom: 2rem; line-height: 1.6; }
+
+        .modal-btns { display: flex; gap: 1rem; justify-content: center; }
+
+        #result-view {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 1000;
+            display: none;
+            padding: 3rem;
+            overflow-y: auto;
+        }
+
+        .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
+        .report-card { background: var(--surface); padding: 2rem; border-radius: 15px; text-align: center; border: 1px solid var(--border); }
+        .score-big { font-size: 4rem; font-weight: 900; color: var(--accent); font-family: var(--mono); }
+
+        @media (max-width: 992px) {
+            .main-container { grid-template-columns: 1fr; overflow-y: auto; height: auto; position: relative; }
+            .sidebar { 
+                position: fixed;
+                bottom: 80px;
+                left: 0;
+                right: 0;
+                height: 60vh;
+                z-index: 1000;
+                transform: translateY(110%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-top: 2px solid var(--accent);
+                box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+            }
+            .sidebar.active { transform: translateY(0); }
+            body { overflow: hidden; }
+            .actions { position: sticky; bottom: 0; }
+            .btn-palette-toggle { border-color: var(--accent); color: var(--accent); }
+        }
+
+        .btn-palette-toggle { display: none; }
+        @media (max-width: 992px) { .btn-palette-toggle { display: block; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../index.html" class="back-hub"><i class="bi bi-arrow-left"></i> Hub</a>
+    <div class="brand">KEAM MOCK <span>2026</span></div>
+    <div class="timer-box" id="timer">03:00:00</div>
+</header>
+
+<!-- Submit Confirmation Modal -->
+<div class="modal-overlay" id="submit-modal">
+    <div class="modal-content">
+        <div class="modal-title">End Mock Test?</div>
+        <p class="modal-text" id="modal-status">You have answered 0 of 150 questions. Are you sure you want to submit?</p>
+        <div class="modal-btns">
+            <button class="btn btn-prev" onclick="closeModal()">Cancel</button>
+            <button class="btn btn-submit" style="margin:0" onclick="submitExam()">Submit Now</button>
+        </div>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="q-area">
+        <div class="subject-tabs" id="subject-tabs"></div>
+        
+        <div class="q-card">
+            <div class="q-meta" id="q-meta">Question 1 - Physics</div>
+            <div class="q-text" id="q-text">Loading question...</div>
+            <div class="options-grid" id="options-grid"></div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="palette-title">Performance Stats</div>
+        <div class="stats-grid">
+            <div class="stat-item ans"><div class="stat-val" id="stat-ans">0</div><div class="stat-lbl">Answered</div></div>
+            <div class="stat-item"><div class="stat-val" id="stat-rem">150</div><div class="stat-lbl">Remaining</div></div>
+            <div class="stat-item rev"><div class="stat-val" id="stat-rev">0</div><div class="stat-lbl">Marked</div></div>
+            <div class="stat-item"><div class="stat-val" id="stat-vis">1</div><div class="stat-lbl">Visited</div></div>
+        </div>
+
+        <div class="palette-title">Question Palette</div>
+        <div class="palette-grid" id="palette"></div>
+    </div>
+</div>
+
+<div class="actions">
+    <div style="display:flex; gap: 0.75rem;">
+        <button class="btn btn-prev" onclick="navigate(-1)">Prev</button>
+        <button class="btn btn-next" onclick="navigate(1)">Next</button>
+    </div>
+    <div style="display:flex; gap: 0.75rem;">
+        <button class="btn btn-palette-toggle" onclick="togglePalette()"><i class="bi bi-grid-3x3-gap"></i> Palette</button>
+        <button class="btn btn-mark" onclick="toggleMark()">Flag Review</button>
+        <button class="btn btn-clear" onclick="clearOption()">Clear</button>
+        <button class="btn btn-submit" style="margin-left: 1rem;" onclick="confirmSubmit()">End Test</button>
+    </div>
+</div>
+
+<!-- Result Overlay -->
+<div id="result-view">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h1 class="display-3 fw-bold">Test Report</h1>
+        <p class="text-muted">KEAM 2026 Simulation - SFI GEC Palakkad Initiative</p>
+        
+        <div class="report-grid">
+            <div class="report-card">
+                <div class="score-big" id="final-score">0</div>
+                <div class="stat-lbl">Final Marks</div>
+            </div>
+            <div class="report-card">
+                <div class="score-big" style="color:var(--green)" id="correct-count">0</div>
+                <div class="stat-lbl">Correct Attempts</div>
+            </div>
+            <div class="report-card">
+                <div class="score-big" style="color:#e74c3c" id="wrong-count">0</div>
+                <div class="stat-lbl">Negative Marks</div>
+            </div>
+        </div>
+
+        <h3 class="mb-4">Subject Wise Summary</h3>
+        <div id="subject-summary"></div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <button class="btn btn-next" onclick="window.location.href='../../index.html'">Return to Homepage</button>
+            <button class="btn btn-prev" onclick="window.location.href='../index.html'">Back to KEAM Hub</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let questions = [];
+    let state = {
+        currentIdx: 0,
+        answers: {}, // index: optionIndex
+        marked: new Set(),
+        visited: new Set([0]),
+        timeLeft: 180 * 60,
+        completed: false
+    };
+
+    const SUBJECTS = [
+        { name: 'Physics', start: 0, count: 45 },
+        { name: 'Chemistry', start: 45, count: 30 },
+        { name: 'Mathematics', start: 75, count: 75 }
+    ];
+
+    async function init() {
+        try {
+            const res = await fetch('../../assets/data/keam_questions.json');
+            const data = await res.json();
+            questions = data.questions;
+            
+            // Load from storage if exists
+            const saved = localStorage.getItem('keam_progress_2026');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                state.answers = parsed.answers || {};
+                state.marked = new Set(parsed.marked || []);
+                state.visited = new Set(parsed.visited || [0]);
+                state.timeLeft = parsed.timeLeft || 180 * 60;
+                state.currentIdx = parsed.currentIdx || 0;
+            }
+
+            renderTabs();
+            renderPalette();
+            renderQuestion();
+            startTimer();
+            updateStats();
+        } catch (e) {
+            console.error("Failed to load questions:", e);
+            document.getElementById('q-text').innerHTML = "<span style='color:red'>Error loading question bank. Please ensure JSON file exists.</span>";
+        }
+    }
+
+    function renderTabs() {
+        const container = document.getElementById('subject-tabs');
+        container.innerHTML = SUBJECTS.map(s => 
+            `<div class="sub-tab ${isCurrentSubject(s) ? 'active' : ''}" onclick="jumpTo(${s.start})">${s.name}</div>`
+        ).join('');
+    }
+
+    function isCurrentSubject(s) {
+        return state.currentIdx >= s.start && state.currentIdx < s.start + s.count;
+    }
+
+    function renderPalette() {
+        const container = document.getElementById('palette');
+        container.innerHTML = questions.map((_, i) => {
+            let cls = 'pal-btn';
+            if (i === state.currentIdx) cls += ' current';
+            if (state.answers[i] !== undefined) cls += ' answered';
+            else if (state.marked.has(i)) cls += ' marked';
+            else if (state.visited.has(i)) cls += ' visited';
+
+            return `<button class="${cls}" onclick="jumpTo(${i})">${i + 1}</button>`;
+        }).join('');
+    }
+
+    function renderQuestion() {
+        const q = questions[state.currentIdx];
+        if (!q) return;
+
+        document.getElementById('q-meta').textContent = `Question ${state.currentIdx + 1} — ${q.subject}`;
+        document.getElementById('q-text').textContent = q.question;
+        
+        const grid = document.getElementById('options-grid');
+        const keys = ['A', 'B', 'C', 'D', 'E'];
+        grid.innerHTML = q.options.map((opt, i) => `
+            <div class="option-btn ${state.answers[state.currentIdx] === i ? 'selected' : ''}" onclick="saveAnswer(${i})">
+                <div class="option-mark">${keys[i]}</div>
+                <span>${opt}</span>
+            </div>
+        `).join('');
+
+        renderTabs();
+        renderPalette();
+        updateStats();
+        saveToStorage();
+    }
+
+    function saveAnswer(optIdx) {
+        state.answers[state.currentIdx] = optIdx;
+        state.marked.delete(state.currentIdx);
+        renderQuestion();
+    }
+
+    function toggleMark() {
+        if (state.marked.has(state.currentIdx)) state.marked.delete(state.currentIdx);
+        else if (state.answers[state.currentIdx] === undefined) state.marked.add(state.currentIdx);
+        renderQuestion();
+    }
+
+    function clearOption() {
+        delete state.answers[state.currentIdx];
+        state.marked.delete(state.currentIdx);
+        renderQuestion();
+    }
+
+    function navigate(dir) {
+        const next = state.currentIdx + dir;
+        if (next >= 0 && next < questions.length) {
+            state.currentIdx = next;
+            state.visited.add(next);
+            renderQuestion();
+        }
+    }
+
+    function jumpTo(idx) {
+        state.currentIdx = idx;
+        state.visited.add(idx);
+        if (window.innerWidth <= 992) {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+        renderQuestion();
+    }
+
+    function togglePalette() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+
+    function updateStats() {
+        const ans = Object.keys(state.answers).length;
+        document.getElementById('stat-ans').textContent = ans;
+        document.getElementById('stat-rem').textContent = questions.length - ans;
+        document.getElementById('stat-rev').textContent = state.marked.size;
+        document.getElementById('stat-vis').textContent = state.visited.size;
+    }
+
+    function startTimer() {
+        const timer = document.getElementById('timer');
+        const interval = setInterval(() => {
+            if (state.completed) { clearInterval(interval); return; }
+            state.timeLeft--;
+            if (state.timeLeft <= 0) {
+                state.timeLeft = 0;
+                clearInterval(interval);
+                submitExam();
+            }
+            
+            const h = Math.floor(state.timeLeft / 3600);
+            const m = Math.floor((state.timeLeft % 3600) / 60);
+            const s = state.timeLeft % 60;
+            timer.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+            if (state.timeLeft < 300) timer.style.color = "#ff0000";
+        }, 1000);
+    }
+
+    function confirmSubmit() {
+        const ans = Object.keys(state.answers).length;
+        document.getElementById('modal-status').textContent = `You have answered ${ans} of ${questions.length} questions. Are you sure you want to submit?`;
+        document.getElementById('submit-modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('submit-modal').style.display = 'none';
+    }
+
+    function submitExam() {
+        closeModal();
+        state.completed = true;
+        localStorage.removeItem('keam_progress_2026'); // Clear on final submit
+        
+        let correct = 0;
+        let wrong = 0;
+        const subScores = SUBJECTS.map(s => ({ name: s.name, correct: 0, wrong: 0, score: 0 }));
+
+        questions.forEach((q, i) => {
+            const ans = state.answers[i];
+            const sub = subScores.find(s => s.name === q.subject);
+            if (ans !== undefined) {
+                if (ans === q.answer) {
+                    correct++;
+                    if (sub) sub.correct++;
+                } else {
+                    wrong++;
+                    if (sub) sub.wrong++;
+                }
+            }
+        });
+
+        subScores.forEach(s => s.score = (s.correct * 4) - s.wrong);
+        const finalScore = (correct * 4) - wrong;
+
+        document.getElementById('final-score').textContent = finalScore;
+        document.getElementById('correct-count').textContent = correct;
+        document.getElementById('wrong-count').textContent = `-${wrong}`;
+        
+        document.getElementById('subject-summary').innerHTML = subScores.map(s => `
+            <div style="background:var(--surface); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 3px solid var(--accent)">
+                <div style="display:flex; justify-content:space-between; align-items:center">
+                    <h5 style="margin:0">${s.name}</h5>
+                    <div style="font-family:var(--mono); font-weight:700">${s.score} / ${SUBJECTS.find(sub=>sub.name===s.name).count * 4}</div>
+                </div>
+                <div style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;">
+                    Correct: ${s.correct} | Wrong: ${s.wrong}
+                </div>
+            </div>
+        `).join('');
+
+        document.getElementById('result-view').style.display = 'block';
+        window.scrollTo(0,0);
+    }
+
+    function saveToStorage() {
+        localStorage.setItem('keam_progress_2026', JSON.stringify({
+            answers: state.answers,
+            marked: Array.from(state.marked),
+            visited: Array.from(state.visited),
+            timeLeft: state.timeLeft,
+            currentIdx: state.currentIdx
+        }));
+    }
+
+    window.onload = init;
+</script>
+
+</body>
+</html>
