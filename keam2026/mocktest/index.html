@@ -1,632 +1,1006 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEAM Mock Test — SFI GEC Palakkad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <style>
-        :root {
-            --bg: #050505;
-            --surface: #121212;
-            --surface2: #1e1e1e;
-            --border: #333333;
-            --accent: #cc0000; /* SFI Red */
-            --accent-glow: rgba(204, 0, 0, 0.3);
-            --text: #ffffff;
-            --muted: #888888;
-            --green: #2ecc71;
-            --font: 'Sora', sans-serif;
-            --mono: 'JetBrains Mono', monospace;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEAM 2026 Mock Test — SFI GEC Palakkad</title>
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon1.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta name="description" content="Full-length KEAM 2026 Mock Test — Physics, Chemistry & Mathematics. Prepared by SFI GEC Palakkad.">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <style>
+    /* ── SFI GECP Color Palette ── */
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --surface2: #1a1a24;
+      --border: #2a2a3a;
+      --accent: #dc2626;      /* SFI Primary Red */
+      --accent2: #991b1b;     /* SFI Dark Red */
+      --accent-glow: rgba(220, 38, 38, 0.25);
+      --gold: #f59e0b;
+      --red-warn: #ef4444;
+      --green: #22c55e;
+      --purple: #8b5cf6;
+      --text: #f1f5f9;
+      --muted: #64748b;
+      --faint: #1e1e2e;
+      --font: 'Sora', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
 
-        body {
-            font-family: var(--font);
-            background: var(--bg);
-            color: var(--text);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Header */
-        header {
-            background: var(--surface);
-            border-bottom: 2px solid var(--accent);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-        .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; flex: 1; }
-        .brand span { color: var(--accent); }
-        .back-hub { font-size: 0.8rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 5px; margin-right: 2rem; }
-        .back-hub:hover { color: var(--accent); }
+    /* ═══════════════════════════════
+       LANDING PAGE
+    ═══════════════════════════════ */
+    #landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .timer-box {
-            font-family: var(--mono);
-            background: var(--bg);
-            border: 1px solid var(--border);
-            padding: 0.5rem 1.25rem;
-            border-radius: 8px;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--accent);
-            box-shadow: 0 0 15px var(--accent-glow);
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10, 10, 15, 0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        /* Main Layout */
-        .main-container {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            flex: 1;
-            min-height: 0;
-        }
+    .nav-brand { display: flex; align-items: center; gap: 0.75rem; }
 
-        /* Question Area */
-        .q-area {
-            padding: 2rem;
-            overflow-y: auto;
-            position: relative;
-        }
+    .nav-logo {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.8rem;
+      color: white; letter-spacing: -0.5px;
+    }
 
-        .subject-tabs {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-        }
+    .nav-back {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent); }
 
-        .sub-tab {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            color: var(--muted);
-            padding: 0.6rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.2s;
-            font-size: 0.85rem;
-        }
+    .nav-title { font-size: 1rem; font-weight: 600; }
+    .nav-sub { font-size: 0.72rem; color: var(--muted); }
 
-        .sub-tab.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-            box-shadow: 0 4px 12px var(--accent-glow);
-        }
+    .beta-badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      font-family: var(--mono);
+    }
 
-        .q-card {
-            background: var(--surface);
-            border-radius: 12px;
-            padding: 2.5rem;
-            border-left: 5px solid var(--accent);
-            margin-bottom: 2rem;
-        }
+    /* Hero */
+    .hero {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .q-meta { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 30%, rgba(220, 38, 38, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 35% at 80% 70%, rgba(153, 27, 27, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-        .q-text { font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(220, 38, 38, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220, 38, 38, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
 
-        .options-grid { display: grid; gap: 1rem; }
+    .hero-content {
+      max-width: 900px; width: 100%;
+      position: relative; z-index: 1;
+      text-align: center;
+    }
 
-        .option-btn {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            padding: 1.2rem;
-            border-radius: 10px;
-            color: var(--text);
-            text-align: left;
-            cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #fca5a5;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: rgba(220, 38, 38, 0.06);
+    }
 
-        .option-btn:hover { border-color: var(--accent); background: rgba(204, 0, 0, 0.05); }
+    .hero-eyebrow .dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
 
-        .option-btn.selected {
-            border-color: var(--accent);
-            background: rgba(204, 0, 0, 0.1);
-            color: white;
-            box-shadow: inset 0 0 10px var(--accent-glow);
-        }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
 
-        .option-mark {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        .selected .option-mark { background: var(--accent); border-color: var(--accent); color: white; }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent), #f87171);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        /* Sidebar Palette */
-        .sidebar {
-            background: var(--surface);
-            border-left: 1px solid var(--border);
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
+    .hero-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-        }
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
 
-        .stat-item {
-            background: var(--bg);
-            padding: 0.75rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--border);
-        }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.8rem;
+      min-width: 130px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
 
-        .stat-val { font-family: var(--mono); font-weight: 700; font-size: 1.1rem; }
-        .stat-lbl { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; margin-top: 4px; }
+    .stat-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 
-        .stat-item.ans { border-color: var(--green); color: var(--green); }
-        .stat-item.rev { border-color: #f1c40f; color: #f1c40f; }
+    .stat-num {
+      font-size: 2rem; font-weight: 800;
+      font-family: var(--mono);
+      color: var(--text); line-height: 1;
+    }
 
-        .palette-title { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+    .stat-label {
+      font-size: 0.72rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;
+    }
 
-        .palette-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0.5rem;
-            overflow-y: auto;
-            max-height: 400px;
-            padding-right: 5px;
-        }
+    .stat-sub { font-size: 0.7rem; color: #fca5a5; font-family: var(--mono); margin-top: 0.15rem; }
 
-        .pal-btn {
-            aspect-ratio: 1;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            color: var(--muted);
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-            transition: 0.1s;
-        }
+    /* Info grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
 
-        .pal-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .pal-btn.current { border-color: var(--accent); background: var(--surface2); color: white; border-width: 2px; }
-        .pal-btn.answered { background: var(--green); border-color: var(--green); color: black; font-weight: 800; }
-        .pal-btn.marked { background: #f1c40f; border-color: #f1c40f; color: black; font-weight: 800; }
-        .pal-btn.visited:not(.answered):not(.marked) { color: var(--accent); border-color: var(--accent); }
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+    }
 
-        /* Actions Bar */
-        .actions {
-            background: var(--surface);
-            padding: 1rem 2rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-shrink: 0;
-            z-index: 100;
-        }
+    .info-box h3 {
+      font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted);
+      margin-bottom: 1rem; font-family: var(--mono);
+    }
 
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            border: 1px solid transparent;
-            font-family: var(--font);
-            transition: 0.2s;
-        }
+    .section-table { width: 100%; border-collapse: collapse; }
+    .section-table th {
+      font-size: 0.68rem; color: var(--muted);
+      text-align: left; padding: 0.3rem 0;
+      font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.07em; border-bottom: 1px solid var(--border);
+    }
+    .section-table td {
+      padding: 0.55rem 0; font-size: 0.85rem;
+      border-bottom: 1px solid rgba(42, 42, 58, 0.6);
+    }
+    .section-table tr:last-child td { border-bottom: none; }
+    .section-table .total td {
+      font-weight: 700; color: var(--accent);
+      border-top: 1px solid var(--border); padding-top: 0.6rem;
+    }
 
-        .btn-prev { background: var(--surface2); color: white; border-color: var(--border); }
-        .btn-next { background: var(--accent); color: white; border-color: var(--accent); }
-        .btn-mark { background: transparent; color: #f1c40f; border-color: #f1c40f; }
-        .btn-clear { background: transparent; color: var(--muted); border-color: var(--border); }
-        .btn-submit { background: var(--green); color: black; border-color: var(--green); margin-left: auto; }
+    .marking-row { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
+    .mark-chip {
+      flex: 1; border-radius: 10px; padding: 0.8rem 0.5rem;
+      text-align: center; font-family: var(--mono);
+    }
+    .mark-chip .val { font-size: 1.4rem; font-weight: 700; line-height: 1; }
+    .mark-chip .lbl { font-size: 0.65rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; }
+    .chip-green { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: var(--green); }
+    .chip-red { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: var(--red-warn); }
+    .chip-gray { background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.25); color: var(--muted); }
 
-        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+    /* Instructions */
+    .instructions {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+      text-align: left;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
 
-        /* Result View */
-        /* Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
+    .instructions h3 {
+      font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted);
+      margin-bottom: 1rem; font-family: var(--mono);
+    }
 
-        .modal-content {
-            background: var(--surface);
-            border: 1px solid var(--accent);
-            border-radius: 20px;
-            padding: 2.5rem;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 0 30px var(--accent-glow);
-        }
+    .instructions ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .instructions li {
+      display: flex; gap: 0.6rem;
+      font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;
+    }
+    .instructions li::before {
+      content: '→'; color: #fca5a5; flex-shrink: 0;
+      font-family: var(--mono); font-size: 0.75rem; margin-top: 0.15rem;
+    }
 
-        .modal-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent); }
-        .modal-text { color: var(--muted); margin-bottom: 2rem; line-height: 1.6; }
+    /* Palette legend */
+    .palette-legend {
+      display: flex; justify-content: center;
+      gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--muted); }
+    .legend-dot {
+      width: 22px; height: 22px; border-radius: 6px;
+      display: grid; place-items: center;
+      font-size: 0.6rem; font-family: var(--mono); font-weight: 600;
+    }
+    .ld-notvisited { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); }
+    .ld-notanswered { background: rgba(239,68,68,0.2); border: 1px solid var(--red-warn); color: var(--red-warn); }
+    .ld-answered { background: rgba(34,197,94,0.2); border: 1px solid var(--green); color: var(--green); }
+    .ld-marked { background: rgba(245,158,11,0.2); border: 1px solid var(--gold); color: var(--gold); }
 
-        .modal-btns { display: flex; gap: 1rem; justify-content: center; }
+    /* Loading state */
+    .loading-state {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 3rem; gap: 1rem;
+    }
+    .loading-spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
 
-        #result-view {
-            position: fixed;
-            inset: 0;
-            background: var(--bg);
-            z-index: 1000;
-            display: none;
-            padding: 3rem;
-            overflow-y: auto;
-        }
+    .start-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white; border: none;
+      padding: 1rem 3rem;
+      font-size: 1rem; font-weight: 700;
+      border-radius: 12px; cursor: pointer;
+      font-family: var(--font); letter-spacing: 0.01em;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      box-shadow: 0 8px 32px var(--accent-glow);
+      margin-bottom: 0.8rem;
+    }
+    .start-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(220,38,38,0.45); }
+    .start-btn:active { transform: translateY(0); }
+    .start-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-        .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
-        .report-card { background: var(--surface); padding: 2rem; border-radius: 15px; text-align: center; border: 1px solid var(--border); }
-        .score-big { font-size: 4rem; font-weight: 900; color: var(--accent); font-family: var(--mono); }
+    .start-note { font-size: 0.72rem; color: var(--muted); font-family: var(--mono); }
 
-        @media (max-width: 992px) {
-            .main-container { grid-template-columns: 1fr; overflow-y: auto; height: auto; position: relative; }
-            .sidebar { 
-                position: fixed;
-                bottom: 80px;
-                left: 0;
-                right: 0;
-                height: 60vh;
-                z-index: 1000;
-                transform: translateY(110%);
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-top: 2px solid var(--accent);
-                box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
-            }
-            .sidebar.active { transform: translateY(0); }
-            body { overflow: hidden; }
-            .actions { position: sticky; bottom: 0; }
-            .btn-palette-toggle { border-color: var(--accent); color: var(--accent); }
-        }
+    /* ═══════════════════════════════
+       EXAM PAGE
+    ═══════════════════════════════ */
+    #exam { display: none; min-height: 100vh; flex-direction: column; }
 
-        .btn-palette-toggle { display: none; }
-        @media (max-width: 992px) { .btn-palette-toggle { display: block; } }
-    </style>
+    .exam-header {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.5rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+
+    .exam-brand { font-weight: 700; font-size: 0.95rem; }
+    .exam-brand span { color: var(--accent); }
+
+    .timer {
+      font-family: var(--mono);
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--text);
+      background: var(--faint);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      letter-spacing: 0.05em;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .timer.warn { color: var(--gold); border-color: var(--gold); }
+    .timer.danger { color: var(--red-warn); border-color: var(--red-warn); animation: timerPulse 1s infinite; }
+    @keyframes timerPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .progress-info { display: flex; gap: 1rem; font-size: 0.75rem; font-family: var(--mono); }
+    .prog-item { color: var(--muted); }
+    .prog-item span { color: var(--text); font-weight: 600; }
+
+    /* Exam layout */
+    .exam-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      flex: 1; min-height: 0;
+    }
+
+    /* Question area */
+    .q-area {
+      padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 1.2rem;
+      overflow-y: auto;
+      min-height: calc(100vh - 130px);
+    }
+
+    .q-section-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    .sec-tab {
+      padding: 0.4rem 1rem; border-radius: 8px;
+      font-size: 0.78rem; font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface); color: var(--muted);
+      transition: all 0.15s; font-family: var(--mono);
+    }
+    .sec-tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .sec-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+    .q-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .q-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .q-num { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+
+    .q-subject-badge {
+      font-size: 0.65rem; font-weight: 700;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      font-family: var(--mono); letter-spacing: 0.05em;
+    }
+    .badge-phy { background: rgba(139,92,246,0.15); color: var(--purple); border: 1px solid rgba(139,92,246,0.3); }
+    .badge-che { background: rgba(220,38,38,0.15); color: #fca5a5; border: 1px solid rgba(220,38,38,0.3); }
+    .badge-mat { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.3); }
+
+    .q-text { font-size: 1rem; line-height: 1.7; color: var(--text); margin-bottom: 1.5rem; }
+
+    .options-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .option-btn {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 0.9rem 1.1rem; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--bg);
+      cursor: pointer; transition: all 0.15s;
+      text-align: left; color: var(--text);
+      font-family: var(--font); font-size: 0.9rem; line-height: 1.5;
+      width: 100%;
+    }
+    .option-btn:hover { border-color: var(--accent); background: rgba(220,38,38,0.06); }
+    .option-btn.selected { border-color: var(--accent); background: rgba(220,38,38,0.12); color: white; }
+
+    .option-key {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 700;
+      width: 22px; height: 22px; border-radius: 6px;
+      background: var(--faint); display: grid; place-items: center;
+      flex-shrink: 0; margin-top: 0.1rem; color: var(--muted);
+      border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .option-btn.selected .option-key { background: var(--accent); color: white; border-color: var(--accent); }
+
+    /* Action buttons */
+    .q-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .action-btn {
+      padding: 0.6rem 1.2rem; border-radius: 8px;
+      font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; border: 1px solid; font-family: var(--font); transition: all 0.15s;
+    }
+    .btn-mark { background: rgba(245,158,11,0.1); border-color: var(--gold); color: var(--gold); }
+    .btn-mark:hover { background: rgba(245,158,11,0.2); }
+    .btn-clear { background: rgba(239,68,68,0.1); border-color: var(--red-warn); color: var(--red-warn); }
+    .btn-clear:hover { background: rgba(239,68,68,0.2); }
+    .btn-next { background: var(--accent); border-color: var(--accent); color: white; margin-left: auto; }
+    .btn-next:hover { background: var(--accent2); }
+    .btn-prev { background: var(--surface); border-color: var(--border); color: var(--muted); }
+    .btn-prev:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-submit-exam { background: linear-gradient(135deg, var(--green), #16a34a); border-color: var(--green); color: white; }
+    .btn-submit-exam:hover { opacity: 0.9; }
+
+    /* Palette sidebar */
+    .palette-sidebar {
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      padding: 1rem; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 1rem;
+      max-height: calc(100vh - 60px);
+      position: sticky; top: 60px;
+    }
+
+    .palette-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+    .pal-stat { padding: 0.5rem; border-radius: 8px; text-align: center; font-family: var(--mono); }
+    .pal-stat .n { font-size: 1.1rem; font-weight: 700; line-height: 1; }
+    .pal-stat .l { font-size: 0.6rem; margin-top: 0.2rem; opacity: 0.7; }
+    .ps-ans { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: var(--green); }
+    .ps-not { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: var(--red-warn); }
+    .ps-mrk { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.25); color: var(--gold); }
+    .ps-skip { background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.25); color: var(--muted); }
+
+    .palette-section-label {
+      font-size: 0.65rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted); font-family: var(--mono);
+    }
+
+    .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.3rem; }
+
+    .pal-btn {
+      aspect-ratio: 1; border-radius: 6px;
+      border: 1px solid var(--border); background: var(--surface2);
+      color: var(--muted); font-size: 0.65rem;
+      font-family: var(--mono); font-weight: 600;
+      cursor: pointer; transition: all 0.1s;
+      display: grid; place-items: center;
+    }
+    .pal-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .pal-btn.current { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 0 2px var(--accent-glow); }
+    .pal-btn.answered { background: rgba(34,197,94,0.15); border-color: var(--green); color: var(--green); }
+    .pal-btn.marked { background: rgba(245,158,11,0.15); border-color: var(--gold); color: var(--gold); }
+    .pal-btn.not-answered { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.4); color: var(--red-warn); }
+
+    .submit-side-btn {
+      width: 100%; padding: 0.8rem;
+      background: linear-gradient(135deg, var(--green), #16a34a);
+      color: white; border: none; border-radius: 10px;
+      font-size: 0.85rem; font-weight: 700;
+      cursor: pointer; font-family: var(--font);
+      transition: opacity 0.15s, transform 0.15s;
+      margin-top: auto;
+    }
+    .submit-side-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ═══════════════════════════════
+       RESULT PAGE
+    ═══════════════════════════════ */
+    #result { display: none; min-height: 100vh; padding: 2rem 1.5rem; }
+
+    .result-wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .result-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 2.5rem;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .result-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(220,38,38,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .score-ring { width: 140px; height: 140px; margin: 0 auto 1.5rem; position: relative; }
+    .score-ring svg { transform: rotate(-90deg); }
+    .score-ring .score-text {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .score-big { font-size: 2rem; font-weight: 800; font-family: var(--mono); color: var(--text); line-height: 1; }
+    .score-max { font-size: 0.7rem; color: var(--muted); font-family: var(--mono); }
+    .result-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .result-sub { color: var(--muted); font-size: 0.85rem; }
+
+    .result-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .res-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem; text-align: center; }
+    .res-stat .num { font-size: 1.6rem; font-weight: 800; font-family: var(--mono); line-height: 1; }
+    .res-stat .lbl { font-size: 0.7rem; color: var(--muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    .section-results { display: flex; flex-direction: column; gap: 0.8rem; }
+
+    .sec-result-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem 1.4rem; }
+    .sec-res-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+    .sec-res-name { font-weight: 600; font-size: 0.9rem; }
+    .sec-res-score { font-family: var(--mono); font-weight: 700; font-size: 1rem; }
+    .sec-bar { height: 6px; background: var(--faint); border-radius: 999px; overflow: hidden; }
+    .sec-bar-fill { height: 100%; border-radius: 999px; transition: width 1s ease; }
+
+    .result-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .restart-btn {
+      background: var(--accent); color: white; border: none;
+      padding: 1rem 2.5rem; font-size: 0.9rem; font-weight: 700;
+      border-radius: 10px; cursor: pointer; font-family: var(--font);
+      transition: opacity 0.15s;
+    }
+    .restart-btn:hover { opacity: 0.85; }
+    .hub-btn {
+      background: var(--surface); color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 1rem 2.5rem; font-size: 0.9rem; font-weight: 700;
+      border-radius: 10px; cursor: pointer; font-family: var(--font);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .hub-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(4px); z-index: 1000;
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 2rem;
+      max-width: 420px; width: 100%; text-align: center;
+    }
+    .modal-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .modal h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .modal p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem; }
+    .modal-actions { display: flex; gap: 0.75rem; justify-content: center; }
+    .modal-cancel {
+      padding: 0.7rem 1.5rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      color: var(--muted); border-radius: 8px;
+      cursor: pointer; font-family: var(--font); font-weight: 600; font-size: 0.85rem;
+    }
+    .modal-confirm {
+      padding: 0.7rem 1.5rem;
+      background: var(--green); border: none; color: white;
+      border-radius: 8px; cursor: pointer;
+      font-family: var(--font); font-weight: 700; font-size: 0.85rem; transition: opacity 0.15s;
+    }
+    .modal-confirm:hover { opacity: 0.85; }
+
+    /* Answer Review Section */
+    .review-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .review-header {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap; gap: 0.75rem;
+    }
+
+    .review-header h3 {
+      font-size: 0.85rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      font-family: var(--mono); color: var(--muted); margin: 0;
+    }
+
+    .review-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+    .review-filter-btn {
+      padding: 0.25rem 0.75rem; border-radius: 999px;
+      font-size: 0.7rem; font-weight: 600;
+      font-family: var(--mono); cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface2); color: var(--muted); transition: all 0.15s;
+    }
+    .review-filter-btn.active,
+    .review-filter-btn:hover { background: var(--accent); border-color: var(--accent); color: white; }
+    .review-filter-btn.f-correct.active { background: var(--green); border-color: var(--green); }
+    .review-filter-btn.f-wrong.active { background: var(--red-warn); border-color: var(--red-warn); }
+    .review-filter-btn.f-skip.active { background: var(--muted); border-color: var(--muted); }
+
+    .review-list { display: flex; flex-direction: column; }
+
+    .review-item {
+      padding: 1.2rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .review-item:last-child { border-bottom: none; }
+    .review-item:hover { background: var(--surface2); }
+
+    .review-item-header {
+      display: flex; align-items: flex-start;
+      gap: 0.75rem; margin-bottom: 0.9rem; flex-wrap: wrap;
+    }
+
+    .review-q-num {
+      font-family: var(--mono); font-size: 0.7rem;
+      color: var(--muted); white-space: nowrap; padding-top: 0.15rem;
+    }
+
+    .review-q-text { font-size: 0.88rem; line-height: 1.6; color: var(--text); flex: 1; }
+
+    .review-status {
+      font-size: 0.65rem; font-weight: 700;
+      font-family: var(--mono); padding: 0.2rem 0.6rem;
+      border-radius: 999px; white-space: nowrap; flex-shrink: 0;
+    }
+    .rs-correct { background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+    .rs-wrong   { background: rgba(239,68,68,0.15); color: var(--red-warn); border: 1px solid rgba(239,68,68,0.3); }
+    .rs-skip    { background: rgba(100,116,139,0.12); color: var(--muted); border: 1px solid rgba(100,116,139,0.3); }
+
+    .review-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.4rem;
+    }
+
+    .review-opt {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      padding: 0.5rem 0.7rem; border-radius: 8px;
+      font-size: 0.8rem; line-height: 1.4;
+      border: 1px solid transparent;
+      background: var(--faint); color: var(--muted);
+    }
+    .review-opt.correct {
+      background: rgba(34,197,94,0.1);
+      border-color: rgba(34,197,94,0.35);
+      color: var(--green); font-weight: 600;
+    }
+    .review-opt.wrong-pick {
+      background: rgba(239,68,68,0.1);
+      border-color: rgba(239,68,68,0.35);
+      color: var(--red-warn);
+      text-decoration: line-through;
+      opacity: 0.8;
+    }
+    .review-opt-key {
+      font-family: var(--mono); font-size: 0.65rem;
+      font-weight: 700; flex-shrink: 0; opacity: 0.7; margin-top: 0.1rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center; padding: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.75rem; margin-top: 2rem;
+    }
+    .footer strong { color: var(--accent); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .exam-body { grid-template-columns: 1fr; }
+      .palette-sidebar {
+        position: fixed; bottom: 0; left: 0; right: 0;
+        top: auto; flex-direction: row; flex-wrap: wrap;
+        max-height: 40vh; border-left: none;
+        border-top: 1px solid var(--border); z-index: 99;
+      }
+      .q-area { min-height: auto; padding-bottom: 45vh; }
+      .result-stats-row { grid-template-columns: 1fr 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .nav { padding: 1rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <a href="../index.html" class="back-hub"><i class="bi bi-arrow-left"></i> Hub</a>
-    <div class="brand">KEAM MOCK <span>2026</span></div>
-    <div class="timer-box" id="timer">03:00:00</div>
-</header>
-
-<!-- Submit Confirmation Modal -->
-<div class="modal-overlay" id="submit-modal">
-    <div class="modal-content">
-        <div class="modal-title">End Mock Test?</div>
-        <p class="modal-text" id="modal-status">You have answered 0 of 150 questions. Are you sure you want to submit?</p>
-        <div class="modal-btns">
-            <button class="btn btn-prev" onclick="closeModal()">Cancel</button>
-            <button class="btn btn-submit" style="margin:0" onclick="submitExam()">Submit Now</button>
-        </div>
+<!-- ═══════════════════════════════════════
+     LANDING PAGE
+═══════════════════════════════════════ -->
+<div id="landing">
+  <nav class="nav">
+    <div class="nav-brand">
+      <div class="nav-logo">SFI</div>
+      <div>
+        <div class="nav-title">SFI GEC Palakkad</div>
+        <div class="nav-sub">KEAM 2026 Mock Test</div>
+      </div>
     </div>
+    <a href="../index.html" class="nav-back"><i class="bi bi-arrow-left"></i> Back to Hub</a>
+    <span class="beta-badge">BETA v1.0</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        KEAM 2026 · Engineering Entrance
+      </div>
+
+      <h1>Engineering Entrance<br><span>Mock Test</span></h1>
+      <p class="hero-sub">
+        Full-length KEAM simulation — Physics, Chemistry &amp; Mathematics<br>
+        Prepared by Students of SFI GEC Palakkad
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">150</div>
+          <div class="stat-label">Questions</div>
+          <div class="stat-sub">Phy · Che · Maths</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3 Hrs</div>
+          <div class="stat-label">Duration</div>
+          <div class="stat-sub">180 min · No pause</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">600</div>
+          <div class="stat-label">Max Marks</div>
+          <div class="stat-sub">+4 correct · −1 wrong</div>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Section Breakdown</h3>
+          <table class="section-table">
+            <thead>
+              <tr><th>Subject</th><th>Q</th><th>Marks</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Physics</td><td>45</td><td>180</td></tr>
+              <tr><td>Chemistry</td><td>30</td><td>120</td></tr>
+              <tr><td>Mathematics</td><td>75</td><td>300</td></tr>
+              <tr class="total"><td>Total</td><td>150</td><td>600</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <h3>Marking Scheme</h3>
+          <div class="marking-row">
+            <div class="mark-chip chip-green"><div class="val">+4</div><div class="lbl">Correct</div></div>
+            <div class="mark-chip chip-red"><div class="val">−1</div><div class="lbl">Wrong</div></div>
+            <div class="mark-chip chip-gray"><div class="val">0</div><div class="lbl">Skipped</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>Instructions — Please Read Before Starting</h3>
+        <ul>
+          <li>Timer starts immediately and <strong>cannot be paused</strong>.</li>
+          <li>Each question has 5 options (A–E). Only one answer is correct.</li>
+          <li>You can change your answer at any time before submission.</li>
+          <li>Use <strong>Mark for Review</strong> to flag questions you want to revisit.</li>
+          <li>Use the Question Palette (right panel) to jump to any question directly.</li>
+          <li>The test <strong>auto-submits</strong> when the timer reaches zero.</li>
+          <li>Your answers are <strong>auto-saved</strong> in browser session storage.</li>
+        </ul>
+      </div>
+
+      <div class="palette-legend">
+        <div class="legend-item"><div class="legend-dot ld-notvisited">1</div> Not Visited</div>
+        <div class="legend-item"><div class="legend-dot ld-notanswered">2</div> Not Answered</div>
+        <div class="legend-item"><div class="legend-dot ld-answered">3</div> Answered</div>
+        <div class="legend-item"><div class="legend-dot ld-marked">4</div> Marked for Review</div>
+      </div>
+
+      <!-- Loading state while questions are fetched -->
+      <div id="load-status" class="loading-state">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading question bank...</div>
+      </div>
+
+      <button class="start-btn" id="start-btn" onclick="startExam()" disabled style="display:none;">
+        Start Exam →
+      </button>
+      <div class="start-note" id="start-note" style="display:none;">
+        By starting, you acknowledge that the timer cannot be paused.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with ❤️ by students of <strong>SFI GEC Palakkad</strong>
+  </div>
 </div>
 
-<div class="main-container">
+
+<!-- ═══════════════════════════════════════
+     EXAM PAGE
+═══════════════════════════════════════ -->
+<div id="exam" style="display:none; flex-direction:column;">
+  <div class="exam-header">
+    <div class="exam-brand">KEAM 2026 · <span>GEC Palakkad</span></div>
+    <div class="timer" id="timer">03:00:00</div>
+    <div class="progress-info">
+      <div class="prog-item">Answered: <span id="hdr-ans">0</span></div>
+      <div class="prog-item">Remaining: <span id="hdr-rem">150</span></div>
+    </div>
+  </div>
+
+  <div class="exam-body">
+    <!-- Question area -->
     <div class="q-area">
-        <div class="subject-tabs" id="subject-tabs"></div>
-        
-        <div class="q-card">
-            <div class="q-meta" id="q-meta">Question 1 - Physics</div>
-            <div class="q-text" id="q-text">Loading question...</div>
-            <div class="options-grid" id="options-grid"></div>
+      <div class="q-section-tabs" id="section-tabs"></div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-num" id="q-num">Question 1 of 150</span>
+          <span class="q-subject-badge badge-phy" id="q-badge">PHY</span>
         </div>
+        <div class="q-text" id="q-text">Loading question...</div>
+        <div class="options-list" id="options-list"></div>
+      </div>
+
+      <div class="q-actions">
+        <button class="action-btn btn-prev" onclick="navigate(-1)">← Prev</button>
+        <button class="action-btn btn-mark" onclick="markForReview()">⚑ Mark for Review</button>
+        <button class="action-btn btn-clear" onclick="clearAnswer()">✕ Clear</button>
+        <button class="action-btn btn-next" onclick="navigate(1)">Next →</button>
+        <button class="action-btn btn-submit-exam" onclick="openSubmitModal()">Submit Exam</button>
+      </div>
     </div>
 
-    <div class="sidebar">
-        <div class="palette-title">Performance Stats</div>
-        <div class="stats-grid">
-            <div class="stat-item ans"><div class="stat-val" id="stat-ans">0</div><div class="stat-lbl">Answered</div></div>
-            <div class="stat-item"><div class="stat-val" id="stat-rem">150</div><div class="stat-lbl">Remaining</div></div>
-            <div class="stat-item rev"><div class="stat-val" id="stat-rev">0</div><div class="stat-lbl">Marked</div></div>
-            <div class="stat-item"><div class="stat-val" id="stat-vis">1</div><div class="stat-lbl">Visited</div></div>
-        </div>
-
-        <div class="palette-title">Question Palette</div>
-        <div class="palette-grid" id="palette"></div>
+    <!-- Palette sidebar -->
+    <div class="palette-sidebar">
+      <div class="palette-stats">
+        <div class="pal-stat ps-ans"><div class="n" id="p-ans">0</div><div class="l">Answered</div></div>
+        <div class="pal-stat ps-not"><div class="n" id="p-not">0</div><div class="l">Not Ans.</div></div>
+        <div class="pal-stat ps-mrk"><div class="n" id="p-mrk">0</div><div class="l">Marked</div></div>
+        <div class="pal-stat ps-skip"><div class="n" id="p-skip">150</div><div class="l">Not Visited</div></div>
+      </div>
+      <div id="palette-container"></div>
+      <button class="submit-side-btn" onclick="openSubmitModal()">Submit Exam</button>
     </div>
+  </div>
 </div>
 
-<div class="actions">
-    <div style="display:flex; gap: 0.75rem;">
-        <button class="btn btn-prev" onclick="navigate(-1)">Prev</button>
-        <button class="btn btn-next" onclick="navigate(1)">Next</button>
+
+<!-- ═══════════════════════════════════════
+     RESULT PAGE
+═══════════════════════════════════════ -->
+<div id="result">
+  <div class="result-wrap">
+    <div class="result-hero">
+      <div class="score-ring">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+          <circle cx="70" cy="70" r="60" fill="none" stroke="url(#scoreGrad)" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="377" id="score-arc" stroke-dashoffset="377"/>
+          <defs>
+            <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#dc2626"/>
+              <stop offset="100%" stop-color="#f87171"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="score-text">
+          <div class="score-big" id="r-score">0</div>
+          <div class="score-max">/ 600</div>
+        </div>
+      </div>
+      <div class="result-title" id="r-title">Test Complete!</div>
+      <div class="result-sub">KEAM 2026 Mock Test · SFI GEC Palakkad</div>
     </div>
-    <div style="display:flex; gap: 0.75rem;">
-        <button class="btn btn-palette-toggle" onclick="togglePalette()"><i class="bi bi-grid-3x3-gap"></i> Palette</button>
-        <button class="btn btn-mark" onclick="toggleMark()">Flag Review</button>
-        <button class="btn btn-clear" onclick="clearOption()">Clear</button>
-        <button class="btn btn-submit" style="margin-left: 1rem;" onclick="confirmSubmit()">End Test</button>
+
+    <div class="result-stats-row">
+      <div class="res-stat"><div class="num" id="r-correct" style="color:var(--green)">0</div><div class="lbl">Correct</div></div>
+      <div class="res-stat"><div class="num" id="r-wrong" style="color:var(--red-warn)">0</div><div class="lbl">Wrong</div></div>
+      <div class="res-stat"><div class="num" id="r-skip" style="color:var(--muted)">0</div><div class="lbl">Skipped</div></div>
+      <div class="res-stat"><div class="num" id="r-acc" style="color:var(--accent)">0%</div><div class="lbl">Accuracy</div></div>
     </div>
+
+    <div class="section-results" id="section-results"></div>
+
+    <div class="result-actions">
+      <button class="restart-btn" onclick="restartExam()">← Try Again</button>
+      <button class="hub-btn" onclick="window.location.href='../index.html'">Back to KEAM Hub</button>
+    </div>
+
+    <!-- Answer Review -->
+    <div class="review-section">
+      <div class="review-header">
+        <h3>Answer Review</h3>
+        <div class="review-filters">
+          <button class="review-filter-btn active" onclick="filterReview('all', this)">All</button>
+          <button class="review-filter-btn f-correct" onclick="filterReview('correct', this)">✓ Correct</button>
+          <button class="review-filter-btn f-wrong" onclick="filterReview('wrong', this)">✗ Wrong</button>
+          <button class="review-filter-btn f-skip" onclick="filterReview('skip', this)">○ Skipped</button>
+        </div>
+      </div>
+      <div class="review-list" id="review-list"></div>
+    </div>
+  </div>
+  <div class="footer">Made with ❤️ by students of <strong>SFI GEC Palakkad</strong></div>
 </div>
 
-<!-- Result Overlay -->
-<div id="result-view">
-    <div style="max-width: 900px; margin: 0 auto;">
-        <h1 class="display-3 fw-bold">Test Report</h1>
-        <p class="text-muted">KEAM 2026 Simulation - SFI GEC Palakkad Initiative</p>
-        
-        <div class="report-grid">
-            <div class="report-card">
-                <div class="score-big" id="final-score">0</div>
-                <div class="stat-lbl">Final Marks</div>
-            </div>
-            <div class="report-card">
-                <div class="score-big" style="color:var(--green)" id="correct-count">0</div>
-                <div class="stat-lbl">Correct Attempts</div>
-            </div>
-            <div class="report-card">
-                <div class="score-big" style="color:#e74c3c" id="wrong-count">0</div>
-                <div class="stat-lbl">Negative Marks</div>
-            </div>
-        </div>
 
-        <h3 class="mb-4">Subject Wise Summary</h3>
-        <div id="subject-summary"></div>
-
-        <div style="margin-top: 3rem; text-align: center;">
-            <button class="btn btn-next" onclick="window.location.href='../../index.html'">Return to Homepage</button>
-            <button class="btn btn-prev" onclick="window.location.href='../index.html'">Back to KEAM Hub</button>
-        </div>
+<!-- Submit Modal -->
+<div class="modal-overlay" id="submit-modal">
+  <div class="modal">
+    <div class="modal-icon">📋</div>
+    <h3>Submit Exam?</h3>
+    <p>Are you sure you want to submit? You have answered
+      <strong id="modal-ans">0</strong> of <strong id="modal-total">150</strong> questions.
+      This action cannot be undone.
+    </p>
+    <div class="modal-actions">
+      <button class="modal-cancel" onclick="closeSubmitModal()">Cancel</button>
+      <button class="modal-confirm" onclick="submitExam()">Submit Now</button>
     </div>
+  </div>
 </div>
 
-<script>
-    let questions = [];
-    let state = {
-        currentIdx: 0,
-        answers: {}, // index: optionIndex
-        marked: new Set(),
-        visited: new Set([0]),
-        timeLeft: 180 * 60,
-        completed: false
-    };
 
-    const SUBJECTS = [
-        { name: 'Physics', start: 0, count: 45 },
-        { name: 'Chemistry', start: 45, count: 30 },
-        { name: 'Mathematics', start: 75, count: 75 }
-    ];
+<!-- Data Loading Scripts -->
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/data-controller.js"></script>
 
-    async function init() {
-        try {
-            const res = await fetch('../../assets/data/keam_questions.json');
-            const data = await res.json();
-            questions = data.questions;
-            
-            // Load from storage if exists
-            const saved = localStorage.getItem('keam_progress_2026');
-            if (saved) {
-                const parsed = JSON.parse(saved);
-                state.answers = parsed.answers || {};
-                state.marked = new Set(parsed.marked || []);
-                state.visited = new Set(parsed.visited || [0]);
-                state.timeLeft = parsed.timeLeft || 180 * 60;
-                state.currentIdx = parsed.currentIdx || 0;
-            }
-
-            renderTabs();
-            renderPalette();
-            renderQuestion();
-            startTimer();
-            updateStats();
-        } catch (e) {
-            console.error("Failed to load questions:", e);
-            document.getElementById('q-text').innerHTML = "<span style='color:red'>Error loading question bank. Please ensure JSON file exists.</span>";
-        }
-    }
-
-    function renderTabs() {
-        const container = document.getElementById('subject-tabs');
-        container.innerHTML = SUBJECTS.map(s => 
-            `<div class="sub-tab ${isCurrentSubject(s) ? 'active' : ''}" onclick="jumpTo(${s.start})">${s.name}</div>`
-        ).join('');
-    }
-
-    function isCurrentSubject(s) {
-        return state.currentIdx >= s.start && state.currentIdx < s.start + s.count;
-    }
-
-    function renderPalette() {
-        const container = document.getElementById('palette');
-        container.innerHTML = questions.map((_, i) => {
-            let cls = 'pal-btn';
-            if (i === state.currentIdx) cls += ' current';
-            if (state.answers[i] !== undefined) cls += ' answered';
-            else if (state.marked.has(i)) cls += ' marked';
-            else if (state.visited.has(i)) cls += ' visited';
-
-            return `<button class="${cls}" onclick="jumpTo(${i})">${i + 1}</button>`;
-        }).join('');
-    }
-
-    function renderQuestion() {
-        const q = questions[state.currentIdx];
-        if (!q) return;
-
-        document.getElementById('q-meta').textContent = `Question ${state.currentIdx + 1} — ${q.subject}`;
-        document.getElementById('q-text').textContent = q.question;
-        
-        const grid = document.getElementById('options-grid');
-        const keys = ['A', 'B', 'C', 'D', 'E'];
-        grid.innerHTML = q.options.map((opt, i) => `
-            <div class="option-btn ${state.answers[state.currentIdx] === i ? 'selected' : ''}" onclick="saveAnswer(${i})">
-                <div class="option-mark">${keys[i]}</div>
-                <span>${opt}</span>
-            </div>
-        `).join('');
-
-        renderTabs();
-        renderPalette();
-        updateStats();
-        saveToStorage();
-    }
-
-    function saveAnswer(optIdx) {
-        state.answers[state.currentIdx] = optIdx;
-        state.marked.delete(state.currentIdx);
-        renderQuestion();
-    }
-
-    function toggleMark() {
-        if (state.marked.has(state.currentIdx)) state.marked.delete(state.currentIdx);
-        else if (state.answers[state.currentIdx] === undefined) state.marked.add(state.currentIdx);
-        renderQuestion();
-    }
-
-    function clearOption() {
-        delete state.answers[state.currentIdx];
-        state.marked.delete(state.currentIdx);
-        renderQuestion();
-    }
-
-    function navigate(dir) {
-        const next = state.currentIdx + dir;
-        if (next >= 0 && next < questions.length) {
-            state.currentIdx = next;
-            state.visited.add(next);
-            renderQuestion();
-        }
-    }
-
-    function jumpTo(idx) {
-        state.currentIdx = idx;
-        state.visited.add(idx);
-        if (window.innerWidth <= 992) {
-            document.querySelector('.sidebar').classList.remove('active');
-        }
-        renderQuestion();
-    }
-
-    function togglePalette() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-
-    function updateStats() {
-        const ans = Object.keys(state.answers).length;
-        document.getElementById('stat-ans').textContent = ans;
-        document.getElementById('stat-rem').textContent = questions.length - ans;
-        document.getElementById('stat-rev').textContent = state.marked.size;
-        document.getElementById('stat-vis').textContent = state.visited.size;
-    }
-
-    function startTimer() {
-        const timer = document.getElementById('timer');
-        const interval = setInterval(() => {
-            if (state.completed) { clearInterval(interval); return; }
-            state.timeLeft--;
-            if (state.timeLeft <= 0) {
-                state.timeLeft = 0;
-                clearInterval(interval);
-                submitExam();
-            }
-            
-            const h = Math.floor(state.timeLeft / 3600);
-            const m = Math.floor((state.timeLeft % 3600) / 60);
-            const s = state.timeLeft % 60;
-            timer.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-            if (state.timeLeft < 300) timer.style.color = "#ff0000";
-        }, 1000);
-    }
-
-    function confirmSubmit() {
-        const ans = Object.keys(state.answers).length;
-        document.getElementById('modal-status').textContent = `You have answered ${ans} of ${questions.length} questions. Are you sure you want to submit?`;
-        document.getElementById('submit-modal').style.display = 'flex';
-    }
-
-    function closeModal() {
-        document.getElementById('submit-modal').style.display = 'none';
-    }
-
-    function submitExam() {
-        closeModal();
-        state.completed = true;
-        localStorage.removeItem('keam_progress_2026'); // Clear on final submit
-        
-        let correct = 0;
-        let wrong = 0;
-        const subScores = SUBJECTS.map(s => ({ name: s.name, correct: 0, wrong: 0, score: 0 }));
-
-        questions.forEach((q, i) => {
-            const ans = state.answers[i];
-            const sub = subScores.find(s => s.name === q.subject);
-            if (ans !== undefined) {
-                if (ans === q.answer) {
-                    correct++;
-                    if (sub) sub.correct++;
-                } else {
-                    wrong++;
-                    if (sub) sub.wrong++;
-                }
-            }
-        });
-
-        subScores.forEach(s => s.score = (s.correct * 4) - s.wrong);
-        const finalScore = (correct * 4) - wrong;
-
-        document.getElementById('final-score').textContent = finalScore;
-        document.getElementById('correct-count').textContent = correct;
-        document.getElementById('wrong-count').textContent = `-${wrong}`;
-        
-        document.getElementById('subject-summary').innerHTML = subScores.map(s => `
-            <div style="background:var(--surface); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem; border-left: 3px solid var(--accent)">
-                <div style="display:flex; justify-content:space-between; align-items:center">
-                    <h5 style="margin:0">${s.name}</h5>
-                    <div style="font-family:var(--mono); font-weight:700">${s.score} / ${SUBJECTS.find(sub=>sub.name===s.name).count * 4}</div>
-                </div>
-                <div style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;">
-                    Correct: ${s.correct} | Wrong: ${s.wrong}
-                </div>
-            </div>
-        `).join('');
-
-        document.getElementById('result-view').style.display = 'block';
-        window.scrollTo(0,0);
-    }
-
-    function saveToStorage() {
-        localStorage.setItem('keam_progress_2026', JSON.stringify({
-            answers: state.answers,
-            marked: Array.from(state.marked),
-            visited: Array.from(state.visited),
-            timeLeft: state.timeLeft,
-            currentIdx: state.currentIdx
-        }));
-    }
-
-    window.onload = init;
-</script>
-
+<script src="../../assets/js/mocktest.js"></script>
 </body>
 </html>

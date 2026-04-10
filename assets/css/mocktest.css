@@ -1,0 +1,23 @@
+/* KEAM Mock Test Styles - extracted from index.html */
+
+/* ── SFI GECP Color Palette ── */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #1a1a24;
+  --border: #2a2a3a;
+  --accent: #dc2626;
+  --accent2: #991b1b;
+  --accent-glow: rgba(220, 38, 38, 0.25);
+  --gold: #f59e0b;
+  --red-warn: #ef4444;
+  --green: #22c55e;
+  --purple: #8b5cf6;
+  --text: #f1f5f9;
+  --muted: #64748b;
+  --faint: #1e1e2e;
+  --font: 'Sora', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+/* ...rest of CSS from the original <style> block... */

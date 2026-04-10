@@ -254,6 +254,20 @@
   });
 
   /**
+   * Header scrolled class
+   */
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    if (header) {
+      if (window.scrollY > 100) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }
+  });
+
+  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');

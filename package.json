@@ -7,8 +7,8 @@
     "start": "npx live-server . --port=3000 --open=./index.html",
     "dev": "npx live-server . --port=3000",
     "build": "npm run minify:css && npm run minify:js && echo 'Build complete!'",
-    "minify:css": "echo 'CSS minification: Install clean-css-cli for production builds'",
-    "minify:js": "echo 'JS minification: Install terser for production builds'",
+    "minify:css": "npx clean-css-cli -o assets/css/main.min.css assets/css/main.css",
+    "minify:js": "npx terser assets/js/main.js -o assets/js/main.min.js -c -m",
     "optimize:images": "npx imagemin assets/img --out-dir=assets/img"
   },
   "keywords": [
@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/sfi-gec-palakkad.git"
+    "url": "https://github.com/sfigecpalakkad/SFIGECP.git"
   },
   "devDependencies": {
     "live-server": "^1.2.2"

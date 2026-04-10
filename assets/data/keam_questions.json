@@ -3,7 +3,7 @@
     {
       "id": 1,
       "subject": "Physics",
-      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is: (Q2)",
+      "question": "A body of mass 2 kg is thrown upward with kinetic energy of 490 J. The height at which kinetic energy becomes half of initial value is:",
       "options": [
         "12.5 m",
         "25 m",
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "subject": "Physics",
-      "question": "The dimensional formula for angular momentum is: (Q3)",
+      "question": "The dimensional formula for angular momentum is:",
       "options": [
         "[ML²T⁻¹]",
         "[MLT⁻¹]",
@@ -30,7 +30,7 @@
     {
       "id": 3,
       "subject": "Physics",
-      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase? (Q4)",
+      "question": "A wave of frequency 500 Hz travels with a speed of 360 m/s. What is the distance between two nearest points 60° apart in phase?",
       "options": [
         "0.12 m",
         "0.24 m",
@@ -43,7 +43,7 @@
     {
       "id": 4,
       "subject": "Physics",
-      "question": "The work done in stretching a spring of force constant k by a length x is: (Q5)",
+      "question": "The work done in stretching a spring of force constant k by a length x is:",
       "options": [
         "kx²/2",
         "kx",
@@ -56,7 +56,7 @@
     {
       "id": 5,
       "subject": "Physics",
-      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to: (Q6)",
+      "question": "A charge q is placed at the centre of the line joining two equal charges Q. The system of three charges will be in equilibrium if q is equal to:",
       "options": [
         "−Q/4",
         "Q/4",
